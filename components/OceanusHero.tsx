@@ -9,10 +9,16 @@ export function OceanusHero() {
     <section className="relative flex h-screen w-full flex-col overflow-hidden bg-black m-0 p-0 top-0">
       <HeroSlideshow properties={HERO_PROPERTIES} />
 
-      {/* Dark gradient at top */}
+      {/* Dark gradient at top - horizontal (left to right) */}
       <div
         aria-hidden
         className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-black/30 to-transparent z-10"
+      />
+
+      {/* Vertical dark gradient at top edges */}
+      <div
+        aria-hidden
+        className="absolute top-0 inset-x-0 h-24 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-10"
       />
 
       {/* Scrims so the property detail reads over any slide:
