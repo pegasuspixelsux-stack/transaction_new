@@ -141,16 +141,27 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
         {/* Main Navigation Row */}
         <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/5">
-          {/* Brand Logo */}
-          <a href={`/${locale}`} className="font-serif tracking-widest text-sm uppercase text-black hover:opacity-80 transition-opacity">
+          {/* Brand Logo with Icon */}
+          <a href={`/${locale}`} className="flex items-center gap-2.5 font-serif tracking-widest text-sm uppercase text-black hover:opacity-80 transition-opacity">
+            <TransactionMark className="size-4" />
             Transaction
           </a>
 
-          {/* CENTER: Main Pages */}
+          {/* CENTER: Main Pages + Separator + Buy/Sell/Rent */}
           <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-black/70">
             <a href={`/${locale}`} className="hover:text-black transition-colors">{dict.inicio}</a>
             <a href={`/${locale}/propiedades`} className="hover:text-black transition-colors">{dict.propiedades}</a>
             <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
+
+            {/* Separator */}
+            <span className="text-black/40">|</span>
+
+            {/* Buy/Sell/Rent Links */}
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
           </nav>
 
           {/* Actions: Language Switcher & Dashboard Link */}
