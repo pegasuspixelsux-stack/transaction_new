@@ -51,7 +51,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className="flex items-center justify-between px-4 py-3 text-white backdrop-blur-md bg-black/30 border-b border-white/10">
+        <div className="flex items-center justify-between px-4 py-3 text-black backdrop-blur-md bg-black/30 border-b border-white/10">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-2.5">
             <TransactionMark className="size-4" />
@@ -65,7 +65,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               aria-label="Select language"
-              className="bg-transparent text-xs text-neutral-300 outline-none cursor-pointer"
+              className="bg-transparent text-xs text-black/70 outline-none cursor-pointer"
             >
               <option value="es" className="bg-neutral-900">ES</option>
               <option value="en" className="bg-neutral-900">EN</option>
@@ -75,7 +75,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             {/* Burger Menu */}
             <button
               aria-label="Abrir menú"
-              className="p-1.5 text-white hover:text-primary transition-colors"
+              className="p-1.5 text-black hover:text-primary transition-colors"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -83,14 +83,14 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-between px-4 py-2 text-white bg-black/20">
+        <div className="flex items-center justify-between px-4 py-2 text-black bg-black/20">
           {/* LEFT: Icon Buttons (Map & Clock only) */}
           <div className="flex items-center gap-6">
             {/* Map Button */}
             <button
               onClick={openMap}
               aria-label="Ver ubicación"
-              className="text-neutral-300 hover:text-primary transition-colors"
+              className="text-black/70 hover:text-primary transition-colors"
               title="Ver ubicación"
             >
               <MapPin className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             <button
               onClick={scrollToHours}
               aria-label="Ver horarios"
-              className="text-neutral-300 hover:text-primary transition-colors"
+              className="text-black/70 hover:text-primary transition-colors"
               title="Ver horarios"
             >
               <Clock className="w-4 h-4" />
@@ -109,15 +109,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-4 text-xs uppercase tracking-wider font-medium">
-            <a href={`/${locale}/comprar`} className="text-neutral-300 hover:text-primary transition-colors">
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
               Buy
             </a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/vender`} className="text-neutral-300 hover:text-primary transition-colors">
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-primary transition-colors">
               Sell
             </a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/alquilar`} className="text-neutral-300 hover:text-primary transition-colors">
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
               Rent
             </a>
           </div>
@@ -125,7 +125,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           {/* RIGHT: Phone Number */}
           <a
             href={contact.phoneHref}
-            className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+            className="flex items-center gap-2 text-black hover:text-primary transition-colors"
           >
             <Phone className="w-4 h-4" />
             <span className="text-xs font-medium">{contact.phone}</span>
@@ -142,15 +142,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         {/* Main Navigation Row */}
         <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/5">
           {/* Brand Logo */}
-          <a href={`/${locale}`} className="font-serif tracking-widest text-sm uppercase text-white hover:opacity-80 transition-opacity">
+          <a href={`/${locale}`} className="font-serif tracking-widest text-sm uppercase text-black hover:opacity-80 transition-opacity">
             Transaction
           </a>
 
           {/* CENTER: Main Pages */}
-          <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-neutral-300">
-            <a href={`/${locale}`} className="hover:text-white transition-colors">{dict.inicio}</a>
-            <a href={`/${locale}/propiedades`} className="hover:text-white transition-colors">{dict.propiedades}</a>
-            <a href={`/${locale}/#contacto`} className="hover:text-white transition-colors">{dict.contacto}</a>
+          <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-black/70">
+            <a href={`/${locale}`} className="hover:text-black transition-colors">{dict.inicio}</a>
+            <a href={`/${locale}/propiedades`} className="hover:text-black transition-colors">{dict.propiedades}</a>
+            <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
           </nav>
 
           {/* Actions: Language Switcher & Dashboard Link */}
@@ -161,11 +161,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
                 value={locale}
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 aria-label="Select language"
-                className="bg-transparent text-xs text-white uppercase tracking-wider outline-none cursor-pointer"
+                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
               >
-                <option value="es" className="bg-neutral-900 text-white">ES</option>
-                <option value="en" className="bg-neutral-900 text-white">EN</option>
-                <option value="pt" className="bg-neutral-900 text-white">PT</option>
+                <option value="es" className="bg-neutral-900 text-black">ES</option>
+                <option value="en" className="bg-neutral-900 text-black">EN</option>
+                <option value="pt" className="bg-neutral-900 text-black">PT</option>
               </select>
             </div>
 
@@ -179,7 +179,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* Secondary Info Bar (Placed BELOW the main nav, matching the same transparent color theme) */}
-        <div className="flex items-center justify-between px-6 py-2 text-xs text-neutral-300">
+        <div className="flex items-center justify-between px-6 py-2 text-xs text-black/70">
           <div className="flex items-center gap-6">
             {/* Address with Map Link */}
             <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
@@ -195,7 +195,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           </div>
 
           {/* Phone Number - Right aligned */}
-          <a href={contact.phoneHref} className="flex items-center gap-2 text-white hover:text-primary transition-colors">
+          <a href={contact.phoneHref} className="flex items-center gap-2 text-black hover:text-primary transition-colors">
             <Phone className="w-3.5 h-3.5 text-primary" />
             <span className="font-medium">{contact.phone}</span>
           </a>
