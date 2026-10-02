@@ -15,10 +15,10 @@ export function OceanusHero() {
         className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-black/30 to-transparent z-10"
       />
 
-      {/* Vertical dark gradient at top edges */}
+      {/* Vertical dark gradient top to transparent bottom */}
       <div
         aria-hidden
-        className="absolute top-0 inset-x-0 h-32 bg-gradient-to-r from-black/60 via-black/20 to-black/60 z-10"
+        className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/70 to-transparent z-10"
       />
 
       {/* Scrims so the property detail reads over any slide:
