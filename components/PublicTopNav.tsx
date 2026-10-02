@@ -84,7 +84,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
         {/* ICON STRIPE: Transparent, no boxes */}
         <div className="flex items-center justify-between px-4 py-2 text-white bg-black/20">
-          {/* LEFT: Icon Buttons */}
+          {/* LEFT: Icon Buttons (Map & Clock only) */}
           <div className="flex items-center gap-6">
             {/* Map Button */}
             <button
@@ -105,15 +105,6 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             >
               <Clock className="w-4 h-4" />
             </button>
-
-            {/* Phone Button */}
-            <a
-              href={contact.phoneHref}
-              aria-label="Llamar"
-              className="text-neutral-300 hover:text-primary transition-colors"
-            >
-              <Phone className="w-4 h-4" />
-            </a>
           </div>
 
           {/* CENTER: Buy, Sell, Rent Links */}
@@ -130,6 +121,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               Rent
             </a>
           </div>
+
+          {/* RIGHT: Phone Number */}
+          <a
+            href={contact.phoneHref}
+            className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+            <span className="text-xs font-medium">{contact.phone}</span>
+          </a>
         </div>
       </div>
 
