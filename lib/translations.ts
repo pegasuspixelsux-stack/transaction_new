@@ -53,6 +53,10 @@ export const dictionary = {
       submit: "Enviar Consulta",
       sending: "Enviando...",
     },
+    featuredProperties: {
+      title: "Propiedades Destacadas",
+      viewAll: "Explorar Inventario Completo",
+    },
   },
   en: {
     nav: {
@@ -108,6 +112,10 @@ export const dictionary = {
       submit: "Send Inquiry",
       sending: "Sending...",
     },
+    featuredProperties: {
+      title: "Featured Properties",
+      viewAll: "Explore Full Inventory",
+    },
   },
   pt: {
     nav: {
@@ -162,6 +170,10 @@ export const dictionary = {
       message: "Mensagem",
       submit: "Enviar Consulta",
       sending: "Enviando...",
+    },
+    featuredProperties: {
+      title: "Propriedades em Destaque",
+      viewAll: "Explorar Inventário Completo",
     },
   },
 } as const;
