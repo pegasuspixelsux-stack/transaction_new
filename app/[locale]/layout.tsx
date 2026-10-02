@@ -1,7 +1,20 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { Playfair_Display, Montserrat } from "next/font/google";
 import { dictionary, type Locale } from "@/lib/translations";
 import { PublicTopNav } from "@/components/PublicTopNav";
+import "@/app/globals.css";
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+});
 
 type Params = Promise<{ locale: string }>;
 
@@ -31,7 +44,10 @@ export default async function LocaleLayout({
   const t = dictionary[locale];
 
   return (
-    <html lang={locale}>
+    <html
+      lang={locale}
+      className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <PublicTopNav locale={locale} nav={t.nav} />
         {children}
