@@ -23,10 +23,10 @@ export function OceanusHero() {
       {/* Centered wordmark watermark. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 z-0 flex select-none items-center justify-center gap-4 sm:gap-8"
+        className="pointer-events-none absolute inset-0 z-0 flex select-none flex-col items-center justify-center gap-4 overflow-hidden px-4 sm:flex-row sm:gap-6 lg:gap-8"
       >
-        <TransactionMark className="size-16 text-white/30 sm:size-24 lg:size-32" />
-        <span className="text-5xl font-normal uppercase tracking-wordmark text-white/30 sm:text-7xl lg:text-8xl">
+        <TransactionMark className="size-14 shrink-0 text-white/30 sm:size-16 md:size-20 lg:size-24 xl:size-28" />
+        <span className="text-2xl font-normal uppercase tracking-wordmark text-white/30 sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
           Transaction
         </span>
       </div>

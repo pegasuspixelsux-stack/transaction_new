@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { dashboardConfig } from "@/config/dashboardConfig";
+import { Clock, MapPin, Phone, Menu } from "lucide-react";
 import { TransactionMark } from "@/components/TransactionMark";
 
 const NAV_LINKS: { label: string; href: string }[] = [
@@ -13,10 +14,33 @@ const NAV_LINKS: { label: string; href: string }[] = [
 const focusRing =
   "focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-4 focus-visible:outline-ink";
 
+const { contact } = dashboardConfig;
+
 export function SiteHeader() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-hairline bg-surface/75 backdrop-blur-md">
-      <nav className="container-page flex items-center justify-between py-5">
+      <div className="bg-ink text-surface">
+        <div className="container-page flex items-center justify-between gap-3 py-1 text-[11px] sm:py-1.5 sm:gap-4 sm:text-xs font-light tracking-wide">
+          <p className="flex items-center gap-1.5">
+            <MapPin className="size-3.5 shrink-0" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sm:hidden">{contact.addressShort}</span>
+            <span className="hidden sm:inline">{contact.address}</span>
+          </p>
+          <p className="flex items-center gap-1.5">
+            <Clock className="size-3.5 shrink-0" strokeWidth={1.5} aria-hidden="true" />
+            <span className="sm:hidden">{contact.hoursShort}</span>
+            <span className="hidden sm:inline">{contact.hours}</span>
+          </p>
+          <a
+            href={contact.phoneHref}
+            className="flex items-center gap-1.5 whitespace-nowrap transition-opacity hover:opacity-80 focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-surface"
+          >
+            <Phone className="size-3.5 shrink-0" strokeWidth={1.5} aria-hidden="true" />
+            {contact.phone}
+          </a>
+        </div>
+      </div>
+      <nav className="container-page flex items-center justify-between py-3 sm:py-5">
         <Link
           href="/"
           aria-label="Transaction — inicio"
