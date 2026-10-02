@@ -139,7 +139,39 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           ========================================================= */}
       <div className="hidden md:flex flex-col">
 
-        {/* Main Navigation Row */}
+        {/* Stripe (Info Bar on TOP) */}
+        <div className="flex items-center justify-between px-6 py-2 text-xs text-black/70">
+          <div className="flex items-center gap-6">
+            {/* Address with Map Link */}
+            <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
+              <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
+              <span>Av. Gorlero, Punta del Este, Maldonado</span>
+            </button>
+
+            {/* Hours with Scroll Link */}
+            <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
+              <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
+              <span>Lun - Sáb: 9:00 - 19:00</span>
+            </button>
+          </div>
+
+          {/* CENTER: Buy/Sell/Rent Links */}
+          <div className="flex items-center gap-2 font-medium">
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
+          </div>
+
+          {/* Phone Number - Right aligned */}
+          <a href={contact.phoneHref} className="flex items-center gap-2 text-black hover:text-primary transition-colors">
+            <Phone className="w-3.5 h-3.5 text-primary" />
+            <span className="font-medium">{contact.phone}</span>
+          </a>
+        </div>
+
+        {/* Main Navigation Row (BELOW the stripe) */}
         <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/5">
           {/* Brand Logo with Icon */}
           <a href={`/${locale}`} className="flex items-center gap-2.5 font-serif tracking-widest text-sm uppercase text-black hover:opacity-80 transition-opacity">
@@ -177,38 +209,6 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               {dict.panel}
             </a>
           </div>
-        </div>
-
-        {/* Secondary Info Bar (Placed BELOW the main nav, matching the same transparent color theme) */}
-        <div className="flex items-center justify-between px-6 py-2 text-xs text-black/70">
-          <div className="flex items-center gap-6">
-            {/* Address with Map Link */}
-            <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
-              <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>Av. Gorlero, Punta del Este, Maldonado</span>
-            </button>
-
-            {/* Hours with Scroll Link */}
-            <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>Lun - Sáb: 9:00 - 19:00</span>
-            </button>
-          </div>
-
-          {/* CENTER: Buy/Sell/Rent Links */}
-          <div className="flex items-center gap-2 font-medium">
-            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
-            <span className="text-black/40">/</span>
-            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
-            <span className="text-black/40">/</span>
-            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
-          </div>
-
-          {/* Phone Number - Right aligned */}
-          <a href={contact.phoneHref} className="flex items-center gap-2 text-black hover:text-primary transition-colors">
-            <Phone className="w-3.5 h-3.5 text-primary" />
-            <span className="font-medium">{contact.phone}</span>
-          </a>
         </div>
 
       </div>
