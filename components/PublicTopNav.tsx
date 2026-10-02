@@ -123,11 +123,11 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
             <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
               {stripe.buy}
             </a>
-            <span className="text-black/40">/</span>
+            <span className="text-black/70">/</span>
             <a href={`/?tab=listing#contacto`} className="text-black/70 hover:text-primary transition-colors">
               {stripe.sell}
             </a>
-            <span className="text-black/40">/</span>
+            <span className="text-black/70">/</span>
             <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
               {stripe.rent}
             </a>
