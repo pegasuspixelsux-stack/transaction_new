@@ -11,10 +11,10 @@ export function FeaturedProperties() {
   const locale = (params?.locale as Locale) || 'es';
   const t = dictionary[locale];
 
-  // Group properties into rows: [2, 3, 2, 3, ...]
+  // Group properties into rows: [2, 3] - exactly 5 properties
   const rows = [];
   let idx = 0;
-  const rowSizes = [2, 3, 2, 3];
+  const rowSizes = [2, 3];
 
   for (let i = 0; i < rowSizes.length && idx < properties.length; i++) {
     const size = rowSizes[i];
@@ -31,7 +31,7 @@ export function FeaturedProperties() {
         </h2>
       </header>
 
-      {/* Asymmetric grid: rows of 2, 3, 2, 3 */}
+      {/* Grid: 5 properties (2 + 3) */}
       <div className="space-y-14">
         {rows.map((row, rowIdx) => {
           const isTwoUp = rowIdx % 2 === 0;
