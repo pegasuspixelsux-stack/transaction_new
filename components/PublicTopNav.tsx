@@ -64,7 +64,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-transparent border-b border-transparent">
+    <header className="sticky top-0 z-50 bg-transparent border-b border-transparent">
 
       {/* =========================================================
           1. MOBILE LAYOUT (< md breakpoint: phones only)
@@ -73,7 +73,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className={`flex items-center justify-between px-4 py-2 backdrop-blur-md bg-transparent border-b border-transparent transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
+        <div className={`flex items-center justify-between px-4 py-2 bg-transparent border-b border-transparent transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2.5 whitespace-nowrap transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
             <TransactionMark className={`size-7 shrink-0 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`} />
