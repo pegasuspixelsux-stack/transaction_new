@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { Locale } from '@/lib/translations';
+import { dashboardConfig } from '@/config/dashboardConfig';
 import { MapPin, Clock, Phone, Globe, Menu } from 'lucide-react';
 
 interface PublicTopNavProps {
@@ -18,6 +19,7 @@ interface PublicTopNavProps {
 export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
   const router = useRouter();
   const pathname = usePathname();
+  const { contact } = dashboardConfig;
 
   const handleLanguageChange = (newLocale: string) => {
     const segments = pathname.split('/');
@@ -172,13 +174,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             </button>
           </div>
 
-          {/* Phone Number */}
-          <div className="flex items-center gap-4">
-            <a href="tel:+59899000000" className="flex items-center gap-2 text-white hover:text-primary transition-colors">
-              <Phone className="w-3.5 h-3.5 text-primary" />
-              <span className="font-medium">+598 99 000 000</span>
-            </a>
-          </div>
+          {/* Phone Number - Right aligned */}
+          <a href={contact.phoneHref} className="flex items-center gap-2 text-white hover:text-primary transition-colors">
+            <Phone className="w-3.5 h-3.5 text-primary" />
+            <span className="font-medium">{contact.phone}</span>
+          </a>
         </div>
 
       </div>
