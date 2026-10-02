@@ -6,8 +6,14 @@ const HERO_PROPERTIES = properties.slice(0, 4);
 
 export function OceanusHero() {
   return (
-    <section className="relative flex min-h-dvh w-full flex-col overflow-hidden bg-surface">
+    <section className="relative flex sm:min-h-dvh min-h-[90dvh] w-full flex-col overflow-hidden bg-surface">
       <HeroSlideshow properties={HERO_PROPERTIES} />
+
+      {/* Dark gradient at top */}
+      <div
+        aria-hidden
+        className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-black/30 to-transparent z-10"
+      />
 
       {/* Scrims so the property detail reads over any slide:
           a soft bottom fade + a stronger radial pool anchored bottom-left. */}
