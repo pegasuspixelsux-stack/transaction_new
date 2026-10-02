@@ -42,7 +42,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/10 border-b border-white/10">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/5 border-b border-white/10">
 
       {/* =========================================================
           1. MOBILE LAYOUT (< md breakpoint: phones only)
@@ -51,7 +51,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className="flex items-center justify-between px-4 py-2 text-black backdrop-blur-md bg-black/10 border-b border-white/10">
+        <div className="flex items-center justify-between px-4 py-2 text-black backdrop-blur-md bg-black/5 border-b border-white/10">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-1.5">
             <TransactionMark className="size-4" />
@@ -83,7 +83,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-between px-4 py-2 text-black bg-black/10">
+        <div className="flex items-center justify-between px-4 py-2 text-black bg-black/5">
           {/* LEFT: Icon Buttons (Map & Clock only) */}
           <div className="flex items-center gap-3">
             {/* Map Button */}
