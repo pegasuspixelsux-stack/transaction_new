@@ -110,15 +110,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-4 text-xs uppercase tracking-wider font-medium">
             <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
-              Buy
+              Comprar
             </a>
             <span className="text-black/40">/</span>
             <a href={`/${locale}/vender`} className="text-black/70 hover:text-primary transition-colors">
-              Sell
+              Vender
             </a>
             <span className="text-black/40">/</span>
             <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
-              Rent
+              Alquilar
             </a>
           </div>
 
