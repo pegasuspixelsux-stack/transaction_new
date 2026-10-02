@@ -54,8 +54,8 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         <div className="flex items-center justify-between px-4 py-2 text-black backdrop-blur-md bg-black/5 border-b border-white/10">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-1.5">
-            <TransactionMark className="size-5" />
-            <span className="font-serif tracking-widest text-base uppercase font-bold">Transaction</span>
+            <TransactionMark className="size-6" />
+            <span className="font-serif tracking-widest text-lg uppercase font-bold">Transaction</span>
           </a>
 
           {/* RIGHT: Language selector and Burger Menu */}
@@ -174,8 +174,8 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         {/* Main Navigation Row (BELOW the stripe) */}
         <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/5">
           {/* Brand Logo with Icon */}
-          <a href={`/${locale}`} className="flex items-center gap-2.5 font-serif tracking-widest text-base uppercase font-bold text-black hover:opacity-80 transition-opacity">
-            <TransactionMark className="size-5" />
+          <a href={`/${locale}`} className="flex items-center gap-2.5 font-serif tracking-widest text-lg uppercase font-bold text-black hover:opacity-80 transition-opacity">
+            <TransactionMark className="size-6" />
             Transaction
           </a>
 
