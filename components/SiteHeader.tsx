@@ -3,6 +3,7 @@ import { Menu } from "lucide-react";
 import { Trident } from "@/components/Trident";
 
 const NAV_LINKS: { label: string; href: string }[] = [
+  { label: "Inicio", href: "/" },
   { label: "Propiedades", href: "/propiedades" },
   { label: "Zonas", href: "/#zonas" },
   { label: "Nosotros", href: "/#nosotros" },

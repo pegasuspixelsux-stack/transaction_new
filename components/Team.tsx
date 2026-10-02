@@ -1,13 +1,30 @@
-import Image from "next/image";
+import { Handshake, MapPin, ShieldCheck, Sparkles, type LucideIcon } from "lucide-react";
 
-const pimg = (id: string) =>
-  `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&q=80`;
-
-const TEAM: { name: string; role: string; image: string }[] = [
-  { name: "Valentina Rocha", role: "Dirección", image: pimg("1494790108377-be9c29b29330") },
-  { name: "Mateo Duarte", role: "Ventas · José Ignacio", image: pimg("1500648767791-00dcc994a43e") },
-  { name: "Sofía Beltrán", role: "Ventas · La Barra", image: pimg("1438761681033-6461ffad8d80") },
-  { name: "Joaquín Vidal", role: "Arquitectura", image: pimg("1507003211169-0a1dd7228f2d") },
+const PILLARS: { icon: LucideIcon; title: string; description: string }[] = [
+  {
+    icon: MapPin,
+    title: "Conocimiento local profundo",
+    description:
+      "Un conocimiento incomparable de los mejores barrios costeros, la normativa de uso del suelo y propiedades exclusivas fuera de mercado.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Discreción absoluta",
+    description:
+      "Asesoramiento confidencial y de trato personalizado, a medida de inversores y familias de alto patrimonio.",
+  },
+  {
+    icon: Sparkles,
+    title: "Portafolio exclusivo",
+    description:
+      "Residencias de lujo seleccionadas una a una, obras de arquitectura moderna frente al mar y oportunidades de inversión de primer nivel.",
+  },
+  {
+    icon: Handshake,
+    title: "Operaciones sin fricción",
+    description:
+      "Acompañamiento integral, desde el primer encuentro con la propiedad hasta la escritura y la gestión posterior de tu portafolio.",
+  },
 ];
 
 export function Team() {
@@ -17,7 +34,7 @@ export function Team() {
         <div>
           <p className="text-xs uppercase tracking-luxury text-ink-muted">Nosotros</p>
           <h2 className="mt-3 font-display text-3xl font-normal tracking-tight sm:text-4xl">
-            Quiénes somos
+            Por qué elegirnos
           </h2>
           <div className="mt-6 max-w-md space-y-4 text-base leading-relaxed text-ink-muted">
             <p>
@@ -40,29 +57,22 @@ export function Team() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-4 gap-y-8 sm:gap-x-6">
-          {TEAM.map((member) => (
-            <figure key={member.name} className="flex flex-col">
-              <div className="relative aspect-[4/5] overflow-hidden border border-hairline bg-mist/20">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  sizes="(min-width: 1024px) 20vw, 45vw"
-                  className="object-cover"
-                />
-              </div>
-              <figcaption className="mt-3">
-                <p className="font-display text-lg font-normal tracking-tight">
-                  {member.name}
-                </p>
-                <p className="mt-0.5 text-xs uppercase tracking-luxury text-ink-muted">
-                  {member.role}
-                </p>
-              </figcaption>
-            </figure>
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          {PILLARS.map(({ icon: Icon, title, description }) => (
+            <li
+              key={title}
+              className="border border-hairline bg-surface-raised/50 p-6 backdrop-blur-sm transition-colors duration-200 ease-out hover:bg-surface-raised"
+            >
+              <Icon className="size-6 text-ink" strokeWidth={1.25} aria-hidden="true" />
+              <h3 className="mt-6 font-display text-lg font-normal tracking-tight">
+                {title}
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                {description}
+              </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );
