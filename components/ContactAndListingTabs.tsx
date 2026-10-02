@@ -161,13 +161,40 @@ export function ContactAndListingTabs({ locale, dict }: ContactAndListingTabsPro
         {/* TAB 1: General Contact */}
         {activeTab === 'contact' && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            {/* Left: Info */}
+            {/* Left: Contact Info */}
             <div className="space-y-8">
               <div>
-                <p className="text-base leading-relaxed text-ink-muted">
+                <p className="text-base leading-relaxed text-ink-muted mb-8">
                   Ponte en contacto con nosotros para cualquier pregunta o consulta sobre nuestras propiedades y servicios.
                 </p>
               </div>
+
+              <dl className="space-y-6">
+                <div>
+                  <dt className="text-xs uppercase tracking-luxury text-ink-muted">Dirección</dt>
+                  <dd className="mt-1 text-sm text-ink">{contact.address}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-luxury text-ink-muted">Horarios</dt>
+                  <dd className="mt-1 text-sm text-ink">{contact.hours}</dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-luxury text-ink-muted">Teléfono</dt>
+                  <dd className="mt-1 text-sm">
+                    <a href={contact.phoneHref} className="text-ink hover:text-primary transition-colors">
+                      {contact.phone}
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs uppercase tracking-luxury text-ink-muted">Email</dt>
+                  <dd className="mt-1 text-sm">
+                    <a href={`mailto:${contact.email}`} className="text-ink hover:text-primary transition-colors">
+                      {contact.email}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
             </div>
 
             {/* Right: Contact Form */}
