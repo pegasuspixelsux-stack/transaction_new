@@ -144,14 +144,14 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
             </a>
           </div>
 
-          {/* RIGHT: Phone Number */}
-          <a
-            href={contact.phoneHref}
-            className="flex items-center gap-2 text-black hover:text-primary transition-colors"
+          {/* RIGHT: Hours */}
+          <button
+            onClick={scrollToHours}
+            className="flex items-center gap-1.5 text-black hover:text-primary transition-colors text-xs font-medium"
+            title="Ver horarios"
           >
-            <Phone className="w-4 h-4" />
-            <span className="text-xs font-medium">{contact.phone}</span>
-          </a>
+            <span>{stripe.hours}</span>
+          </button>
         </div>
       </div>
 
