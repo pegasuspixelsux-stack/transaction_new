@@ -13,6 +13,7 @@ export const dictionary = {
       cta: "Explorar Propiedades",
     },
     advisory: {
+      label: "Vender o Alquilar",
       title: "Publica tu propiedad con nosotros",
       subtitle: "Tanto para venta como para alquiler, ofrecemos asesoramiento integral, servicio prémium y publicación directa en nuestra plataforma.",
       points: [
@@ -29,7 +30,15 @@ export const dictionary = {
         sell: "Venta",
         rent: "Alquiler",
         submit: "Solicitar Asesoramiento",
+        sending: "Enviando...",
       },
+    },
+    stripe: {
+      address: "Av. Gorlero, Punta del Este, Maldonado",
+      hours: "Lun - Sáb: 9:00 - 19:00",
+      buy: "Comprar",
+      sell: "Vender",
+      rent: "Alquilar",
     },
   },
   en: {
@@ -46,6 +55,7 @@ export const dictionary = {
       cta: "Explore Properties",
     },
     advisory: {
+      label: "Sell or Rent",
       title: "Publish Your Property With Us",
       subtitle: "For both sale and rental, we offer comprehensive advisory, premium service, and direct publication on our platform to maximize your property's value.",
       points: [
@@ -62,7 +72,15 @@ export const dictionary = {
         sell: "Sale",
         rent: "Rental",
         submit: "Request Advisory",
+        sending: "Sending...",
       },
+    },
+    stripe: {
+      address: "Av. Gorlero, Punta del Este, Maldonado",
+      hours: "Mon - Sat: 9:00 - 19:00",
+      buy: "Buy",
+      sell: "Sell",
+      rent: "Rent",
     },
   },
   pt: {
@@ -79,6 +97,7 @@ export const dictionary = {
       cta: "Explorar Propriedades",
     },
     advisory: {
+      label: "Vender ou Alugar",
       title: "Publique sua propriedade conosco",
       subtitle: "Tanto para venda quanto aluguel, oferecemos consultoria abrangente, serviço premium e publicação direta em nossa plataforma.",
       points: [
@@ -95,7 +114,15 @@ export const dictionary = {
         sell: "Venda",
         rent: "Aluguel",
         submit: "Solicitar Consultoria",
+        sending: "Enviando...",
       },
+    },
+    stripe: {
+      address: "Av. Gorlero, Punta del Este, Maldonado",
+      hours: "Seg - Sáb: 9:00 - 19:00",
+      buy: "Comprar",
+      sell: "Vender",
+      rent: "Alugar",
     },
   },
 } as const;

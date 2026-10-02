@@ -15,9 +15,16 @@ interface PublicTopNavProps {
     contacto: string;
     panel: string;
   };
+  stripe: {
+    address: string;
+    hours: string;
+    buy: string;
+    sell: string;
+    rent: string;
+  };
 }
 
-export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
+export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps) {
   const router = useRouter();
   const pathname = usePathname();
   const { contact } = dashboardConfig;
@@ -114,15 +121,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium">
             <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
-              Comprar
+              {stripe.buy}
             </a>
             <span className="text-black/40">/</span>
             <a href={`/${locale}/vender`} className="text-black/70 hover:text-primary transition-colors">
-              Vender
+              {stripe.sell}
             </a>
             <span className="text-black/40">/</span>
             <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
-              Alquilar
+              {stripe.rent}
             </a>
           </div>
 
@@ -148,22 +155,22 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           {/* Address with Map Link */}
           <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
             <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
-            <span>Av. Gorlero, Punta del Este, Maldonado</span>
+            <span>{stripe.address}</span>
           </button>
 
           {/* CENTER: Buy/Sell/Rent Links */}
           <div className="flex items-center gap-2 font-medium">
-            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">{stripe.buy}</a>
             <span className="text-black/40">/</span>
-            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">{stripe.sell}</a>
             <span className="text-black/40">/</span>
-            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">{stripe.rent}</a>
           </div>
 
           {/* Hours - Right aligned */}
           <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
             <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
-            <span>Lun - Sáb: 9:00 - 19:00</span>
+            <span>{stripe.hours}</span>
           </button>
         </div>
 

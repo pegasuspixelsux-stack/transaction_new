@@ -75,7 +75,7 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
           <div className="space-y-8">
             {/* Eyebrow, Heading, Subtitle */}
             <div>
-              <p className="text-xs uppercase tracking-luxury text-ink-muted">Vender o Alquilar</p>
+              <p className="text-xs uppercase tracking-luxury text-ink-muted">{dict.label}</p>
               <h2 className="mt-3 font-display text-3xl font-normal tracking-tight sm:text-4xl">
                 {dict.title}
               </h2>
@@ -174,7 +174,7 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
                 disabled={isSubmitting}
                 className="w-full px-6 py-3 bg-primary hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-ink font-semibold rounded-lg transition-colors"
               >
-                {isSubmitting ? 'Enviando...' : dict.form.submit}
+                {isSubmitting ? dict.form.sending : dict.form.submit}
               </button>
             </form>
           </div>
