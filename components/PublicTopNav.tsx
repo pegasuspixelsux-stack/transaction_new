@@ -73,7 +73,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className="flex items-center justify-between px-4 py-2 text-black backdrop-blur-md bg-black/5 border-b border-white/10">
+        <div className={`flex items-center justify-between px-4 py-2 backdrop-blur-md bg-black/5 border-b border-white/10 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className={`flex items-center gap-1.5 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
             <TransactionMark className="size-6" />
@@ -87,7 +87,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               aria-label="Select language"
-              className="bg-white/10 text-xs text-black outline-none cursor-pointer px-2 py-1 rounded border border-white/20 hover:bg-white/15 transition-colors"
+              className={`text-xs outline-none cursor-pointer px-2 py-1 rounded border transition-colors ${isScrolled ? 'bg-white/20 text-white border-white/30 hover:bg-white/25' : 'bg-white/10 text-black border-white/20 hover:bg-white/15'}`}
             >
               <option value="es" className="bg-neutral-950 text-white">ES</option>
               <option value="en" className="bg-neutral-950 text-white">EN</option>
@@ -97,7 +97,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
             {/* Burger Menu */}
             <button
               aria-label="Abrir menú"
-              className="p-1.5 text-black hover:text-primary transition-colors"
+              className={`p-1.5 transition-colors ${isScrolled ? 'text-white hover:text-white/80' : 'text-black hover:text-primary'}`}
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -105,7 +105,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-between px-4 py-2 text-black bg-black/5">
+        <div className={`flex items-center justify-between px-4 py-2 bg-black/5 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
           {/* LEFT: Icon Buttons (Map & Clock only) */}
           <div className="flex items-center gap-3">
             {/* Map Button */}
@@ -202,13 +202,13 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
 
           {/* Language Switcher & Phone */}
           <div className="flex items-center gap-4">
-            <div className="relative flex items-center gap-1 bg-white/10 border border-white/20 rounded-lg px-2.5 py-1.5 hover:bg-white/15 transition-colors">
+            <div className={`relative flex items-center gap-1 rounded-lg px-2.5 py-1.5 transition-colors ${isScrolled ? 'bg-white/20 border border-white/30 hover:bg-white/25' : 'bg-white/10 border border-white/20 hover:bg-white/15'}`}>
               <Globe className="w-3.5 h-3.5 text-primary shrink-0" />
               <select
                 value={locale}
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 aria-label="Select language"
-                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer appearance-none pr-1"
+                className={`bg-transparent text-xs uppercase tracking-wider outline-none cursor-pointer appearance-none pr-1 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}
               >
                 <option value="es" className="bg-neutral-950 text-white py-1">ES</option>
                 <option value="en" className="bg-neutral-950 text-white py-1">EN</option>
