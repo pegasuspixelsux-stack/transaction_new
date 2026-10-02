@@ -46,9 +46,9 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${playfair.variable} ${montserrat.variable} h-full antialiased`}
+      className={`${playfair.variable} ${montserrat.variable} h-full antialiased p-0 m-0`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-full flex flex-col p-0 m-0">
         <PublicTopNav locale={locale} dict={t.nav} stripe={t.stripe} />
         {children}
       </body>
