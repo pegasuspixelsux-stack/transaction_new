@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Watermark } from "@/components/Watermark";
 import type { Property } from "@/types/property";
 import { formatPrice, propertyTypeLabel } from "@/lib/properties";
 
@@ -23,6 +24,7 @@ export function PropertyCard({ property }: { property: Property }) {
             aria-hidden
             className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/45 to-transparent"
           />
+          <Watermark />
           <span className="absolute bottom-4 left-4 text-xs uppercase tracking-luxury text-white [text-shadow:0_1px_6px_rgba(0,0,0,0.5)]">
             {zone}
           </span>

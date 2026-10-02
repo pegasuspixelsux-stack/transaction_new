@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, BedDouble, MapPin } from "lucide-react";
 import { formatPrice, properties, propertyTypeLabel } from "@/lib/properties";
 import { InquiryModal } from "@/components/InquiryModal";
+import { Watermark } from "@/components/Watermark";
 import { SiteFooter } from "@/components/SiteFooter";
 
 type Params = Promise<{ id: string }>;
@@ -77,6 +78,7 @@ export default async function PropertyDetailPage({ params }: { params: Params })
             sizes="(min-width: 1280px) 1200px, 100vw"
             className="object-cover"
           />
+          <Watermark showLocation />
         </div>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_360px] lg:gap-16">
