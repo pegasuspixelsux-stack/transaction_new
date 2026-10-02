@@ -6,7 +6,7 @@ const HERO_PROPERTIES = properties.slice(0, 4);
 
 export function OceanusHero() {
   return (
-    <section className="relative flex h-screen w-full flex-col overflow-hidden bg-black">
+    <section className="relative flex h-screen w-full flex-col overflow-hidden bg-black m-0 p-0 top-0">
       <HeroSlideshow properties={HERO_PROPERTIES} />
 
       {/* Dark gradient at top */}
