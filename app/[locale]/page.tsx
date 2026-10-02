@@ -9,6 +9,7 @@ import { Team } from "@/components/Team";
 import { Contact } from "@/components/Contact";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AGenteConcierge } from "@/components/AGenteConcierge";
+import { PropertyAdvisorySection } from "@/components/PropertyAdvisorySection";
 
 type Params = Promise<{ locale: string }>;
 
@@ -30,6 +31,7 @@ export default async function HomePage({ params }: { params: Params }) {
       <OceanusHero />
       <BrandStatement />
       <FeaturedProperties />
+      <PropertyAdvisorySection locale={locale} dict={dictionary[locale].advisory} />
       <Zones />
       <Team />
       <Contact />
