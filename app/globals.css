@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  background: var(--color-surface);
+  background: transparent;
   color: var(--color-ink);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
