@@ -172,15 +172,6 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             </button>
           </div>
 
-          {/* CENTER: Comprar, Vender, Alquilar */}
-          <div className="flex items-center gap-4 uppercase tracking-wider text-xs font-medium">
-            <a href={`/${locale}/comprar`} className="text-white hover:text-primary transition-colors">Comprar</a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/vender`} className="text-white hover:text-primary transition-colors">Vender</a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/alquilar`} className="text-white hover:text-primary transition-colors">Alquilar</a>
-          </div>
-
           {/* Phone Number */}
           <div className="flex items-center gap-4">
             <a href="tel:+59899000000" className="flex items-center gap-2 text-white hover:text-primary transition-colors">
