@@ -76,7 +76,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         <div className={`flex items-center justify-between px-4 py-2 transition-colors text-white ${isScrolled ? 'backdrop-blur-md bg-black/20 border-b border-white/10' : 'bg-transparent border-b border-black'}`}>
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2.5 whitespace-nowrap text-white`}>
-            <TransactionMark className="size-8 shrink-0 text-sky-600" />
+            <TransactionMark className="size-8 shrink-0 text-white" />
             <span className="text-xl font-bold uppercase tracking-wordmark">Transaction</span>
           </a>
 
@@ -177,7 +177,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         <div className={`flex items-center justify-between px-4 py-2 transition-colors text-white ${isScrolled ? 'border-b border-white/20 bg-black/20' : 'border-b border-transparent bg-transparent'}`}>
           {/* Brand Logo with Icon */}
           <a href={`/${locale}`} className="flex flex-shrink-0 items-center gap-2 whitespace-nowrap text-lg font-bold uppercase tracking-wordmark text-white hover:opacity-80 transition-colors">
-            <TransactionMark className="size-8 shrink-0 text-sky-600 transition-colors" />
+            <TransactionMark className="size-8 shrink-0 text-white transition-colors" />
             Transaction
           </a>
 
