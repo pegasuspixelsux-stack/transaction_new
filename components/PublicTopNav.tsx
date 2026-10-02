@@ -87,7 +87,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               aria-label="Select language"
-              className={`text-xs outline-none cursor-pointer px-2 py-1 rounded border transition-colors ${isScrolled ? 'bg-white/20 text-white border-white/30 hover:bg-white/25' : 'bg-white/10 text-black border-white/20 hover:bg-white/15'}`}
+              className={`text-xs text-white outline-none cursor-pointer px-2 py-1 rounded border transition-colors ${isScrolled ? 'bg-white/20 border-white/30 hover:bg-white/25' : 'bg-white/10 border-white/20 hover:bg-white/15'}`}
             >
               <option value="es" className="bg-neutral-950 text-white">ES</option>
               <option value="en" className="bg-neutral-950 text-white">EN</option>
@@ -97,7 +97,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
             {/* Burger Menu */}
             <button
               aria-label="Abrir menú"
-              className={`p-1.5 transition-colors ${isScrolled ? 'text-white hover:text-white/80' : 'text-black hover:text-primary'}`}
+              className="p-1.5 text-white hover:text-white/80 transition-colors"
             >
               <Menu className="w-6 h-6" />
             </button>
@@ -110,7 +110,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           <button
             onClick={openMap}
             aria-label="Ver ubicación"
-            className="text-black/70 hover:text-primary transition-colors"
+            className="text-white hover:text-white/80 transition-colors"
             title="Ver ubicación"
           >
             <MapPin className="w-4 h-4" />
@@ -118,15 +118,15 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
 
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium">
-            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
+            <a href={`/${locale}/comprar`} className="text-white hover:text-white/80 transition-colors">
               {stripe.buy}
             </a>
-            <span className="text-black/70">/</span>
-            <a href={`/?tab=listing#contacto`} className="text-black/70 hover:text-primary transition-colors">
+            <span className="text-white/60">/</span>
+            <a href={`/?tab=listing#contacto`} className="text-white hover:text-white/80 transition-colors">
               {stripe.sell}
             </a>
-            <span className="text-black/70">/</span>
-            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
+            <span className="text-white/60">/</span>
+            <a href={`/${locale}/alquilar`} className="text-white hover:text-white/80 transition-colors">
               {stripe.rent}
             </a>
           </div>
@@ -135,7 +135,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           <button
             onClick={scrollToHours}
             aria-label="Ver horarios"
-            className="text-black/70 hover:text-primary transition-colors"
+            className="text-white hover:text-white/80 transition-colors"
             title="Ver horarios"
           >
             <Clock className="w-4 h-4" />
@@ -150,7 +150,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
       <div className="hidden md:flex flex-col">
 
         {/* Stripe (Info Bar on TOP) */}
-        <div className={`flex items-center justify-between px-6 py-2 text-xs transition-colors ${isScrolled ? 'border-b border-black/10 bg-black/20 text-white' : 'border-b border-transparent bg-transparent text-black/70'}`}>
+        <div className={`flex items-center justify-between px-6 py-2 text-xs transition-colors text-white ${isScrolled ? 'border-b border-black/10 bg-black/20' : 'border-b border-transparent bg-transparent'}`}>
           {/* Address with Map Link */}
           <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
             <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
@@ -159,33 +159,33 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
 
           {/* CENTER: Buy/Sell/Rent Links */}
           <div className="flex items-center gap-2 font-medium">
-            <a href={`/${locale}/comprar`} className={`transition-colors ${isScrolled ? 'text-white hover:text-white/80' : 'text-black/70 hover:text-black'}`}>{stripe.buy}</a>
-            <span className={`transition-colors ${isScrolled ? 'text-white/40' : 'text-black/40'}`}>/</span>
-            <a href={`/?tab=listing#contacto`} className={`transition-colors ${isScrolled ? 'text-white hover:text-white/80' : 'text-black/70 hover:text-black'}`}>{stripe.sell}</a>
-            <span className={`transition-colors ${isScrolled ? 'text-white/40' : 'text-black/40'}`}>/</span>
-            <a href={`/${locale}/alquilar`} className={`transition-colors ${isScrolled ? 'text-white hover:text-white/80' : 'text-black/70 hover:text-black'}`}>{stripe.rent}</a>
+            <a href={`/${locale}/comprar`} className="text-white hover:text-white/80 transition-colors">{stripe.buy}</a>
+            <span className="text-white/40">/</span>
+            <a href={`/?tab=listing#contacto`} className="text-white hover:text-white/80 transition-colors">{stripe.sell}</a>
+            <span className="text-white/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-white hover:text-white/80 transition-colors">{stripe.rent}</a>
           </div>
 
           {/* Hours - Right aligned */}
-          <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
+          <button onClick={scrollToHours} className="flex items-center gap-2 text-white hover:text-white/80 transition-colors">
             <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
             <span>{stripe.hours}</span>
           </button>
         </div>
 
         {/* Main Navigation Row (BELOW the stripe) */}
-        <div className={`flex items-center justify-between px-4 py-2 transition-colors ${isScrolled ? 'border-b border-white/20 bg-black/20' : 'border-b border-transparent bg-transparent'}`}>
+        <div className={`flex items-center justify-between px-4 py-2 transition-colors text-white ${isScrolled ? 'border-b border-white/20 bg-black/20' : 'border-b border-transparent bg-transparent'}`}>
           {/* Brand Logo with Icon */}
-          <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2 whitespace-nowrap font-serif tracking-[0.1em] text-sm uppercase font-bold hover:opacity-80 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
-            <TransactionMark className={`size-6 shrink-0 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`} />
+          <a href={`/${locale}`} className="flex flex-shrink-0 items-center gap-2 whitespace-nowrap font-serif tracking-[0.1em] text-sm uppercase font-bold text-white hover:opacity-80 transition-colors">
+            <TransactionMark className="size-6 shrink-0 text-white transition-colors" />
             Transaction
           </a>
 
           {/* CENTER: Main Pages */}
-          <nav className={`flex items-center gap-8 text-xs uppercase tracking-wider transition-colors ${isScrolled ? 'text-white' : 'text-black/70'}`}>
-            <a href={`/${locale}`} className={`transition-colors ${isScrolled ? 'hover:text-white/80' : 'hover:text-black'}`}>{dict.inicio}</a>
-            <a href={`/${locale}/propiedades`} className={`transition-colors ${isScrolled ? 'hover:text-white/80' : 'hover:text-black'}`}>{dict.propiedades}</a>
-            <a href={`/${locale}/#contacto`} className={`transition-colors ${isScrolled ? 'hover:text-white/80' : 'hover:text-black'}`}>{dict.contacto}</a>
+          <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-white transition-colors">
+            <a href={`/${locale}`} className="hover:text-white/80 transition-colors">{dict.inicio}</a>
+            <a href={`/${locale}/propiedades`} className="hover:text-white/80 transition-colors">{dict.propiedades}</a>
+            <a href={`/${locale}/#contacto`} className="hover:text-white/80 transition-colors">{dict.contacto}</a>
           </nav>
 
           {/* Language Switcher & Phone */}
@@ -196,7 +196,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
                 value={locale}
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 aria-label="Select language"
-                className={`bg-transparent text-xs uppercase tracking-wider outline-none cursor-pointer appearance-none pr-1 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}
+                className="bg-transparent text-xs uppercase tracking-wider text-white outline-none cursor-pointer appearance-none pr-1 transition-colors"
               >
                 <option value="es" className="bg-neutral-950 text-white py-1">ES</option>
                 <option value="en" className="bg-neutral-950 text-white py-1">EN</option>
@@ -204,7 +204,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
               </select>
             </div>
 
-            <a href={contact.phoneHref} className={`flex items-center gap-2 transition-colors text-xs font-medium ${isScrolled ? 'text-white hover:text-white/80' : 'text-black hover:text-primary'}`}>
+            <a href={contact.phoneHref} className="flex items-center gap-2 text-xs font-medium text-white hover:text-white/80 transition-colors">
               <Phone className="w-3.5 h-3.5 text-primary" />
               <span>{contact.phone}</span>
             </a>
