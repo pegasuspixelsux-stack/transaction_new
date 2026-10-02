@@ -47,7 +47,7 @@ export function PublicTopNav({ locale, nav }: PublicTopNavProps) {
       <nav className="container-page flex items-center justify-between py-3 sm:py-5">
         <Link href={`/${locale}`} className="flex items-center gap-2.5">
           <TransactionMark className="size-4 text-sky-600" />
-          <span className="text-sm font-bold uppercase tracking-widest text-ink">Transaction</span>
+          <span className="text-sm font-light uppercase tracking-wordmark text-ink">Transaction</span>
         </Link>
 
         <ul className="hidden items-center gap-10 md:flex">
