@@ -31,9 +31,9 @@ export default async function HomePage({ params }: { params: Params }) {
       <OceanusHero />
       <BrandStatement />
       <FeaturedProperties />
-      <PropertyAdvisorySection locale={locale} dict={dictionary[locale].advisory} />
       <Zones />
       <Team />
+      <PropertyAdvisorySection locale={locale} dict={dictionary[locale].advisory} />
       <Contact />
       <SiteFooter />
       <AGenteConcierge />

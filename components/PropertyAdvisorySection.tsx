@@ -68,20 +68,18 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
   };
 
   return (
-    <section className="relative py-16 lg:py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+    <section className="scroll-mt-24 border-t border-hairline bg-surface-raised">
+      <div className="container-page py-24 sm:py-32">
+        <p className="text-xs uppercase tracking-luxury text-ink-muted">Vender o Alquilar</p>
+        <h2 className="mt-3 font-display text-3xl font-normal tracking-tight sm:text-4xl">
+          {dict.title}
+        </h2>
+        <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">
+          {dict.subtitle}
+        </p>
+        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* LEFT COLUMN: Text & Key Points */}
           <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl lg:text-5xl font-serif font-light text-white mb-4">
-                {dict.title}
-              </h2>
-              <p className="text-lg text-neutral-400 leading-relaxed">
-                {dict.subtitle}
-              </p>
-            </div>
-
             {/* Key Points */}
             <div className="space-y-4">
               {dict.points.map((point, index) => (
@@ -89,95 +87,92 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
                   <div className="flex-shrink-0 mt-1">
                     <ChevronRight className="w-5 h-5 text-sky-600" />
                   </div>
-                  <p className="text-neutral-300">{point}</p>
+                  <p className="text-ink-muted">{point}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* RIGHT COLUMN: Contact Form */}
-          <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-sky-600/10 to-transparent rounded-2xl blur-3xl -z-10" />
-            <div className="backdrop-blur-md bg-white/[0.02] border border-white/10 rounded-2xl p-8 lg:p-10">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name Field */}
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-neutral-300 mb-2">
-                    {dict.form.name}
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600/50 transition-all"
-                    placeholder={dict.form.name}
-                  />
-                </div>
+          <div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {/* Name Field */}
+              <div>
+                <label htmlFor="name" className="block text-xs uppercase tracking-luxury text-ink-muted mb-2">
+                  {dict.form.name}
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-surface border border-hairline rounded-lg text-ink placeholder-ink-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                  placeholder={dict.form.name}
+                />
+              </div>
 
-                {/* Phone Field */}
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-neutral-300 mb-2">
-                    {dict.form.phone}
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600/50 transition-all"
-                    placeholder={dict.form.phone}
-                  />
-                </div>
+              {/* Phone Field */}
+              <div>
+                <label htmlFor="phone" className="block text-xs uppercase tracking-luxury text-ink-muted mb-2">
+                  {dict.form.phone}
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-surface border border-hairline rounded-lg text-ink placeholder-ink-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                  placeholder={dict.form.phone}
+                />
+              </div>
 
-                {/* Operation Type */}
-                <div>
-                  <label htmlFor="operationType" className="block text-sm font-medium text-neutral-300 mb-2">
-                    {dict.form.operationType}
-                  </label>
-                  <select
-                    id="operationType"
-                    name="operationType"
-                    value={formData.operationType}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600/50 transition-all cursor-pointer"
-                  >
-                    <option value="sell" className="bg-neutral-900">{dict.form.sell}</option>
-                    <option value="rent" className="bg-neutral-900">{dict.form.rent}</option>
-                  </select>
-                </div>
-
-                {/* Description Field */}
-                <div>
-                  <label htmlFor="description" className="block text-sm font-medium text-neutral-300 mb-2">
-                    {dict.form.description}
-                  </label>
-                  <textarea
-                    id="description"
-                    name="description"
-                    value={formData.description}
-                    onChange={handleChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-sky-600 focus:ring-1 focus:ring-sky-600/50 transition-all resize-none"
-                    placeholder={dict.form.description}
-                  />
-                </div>
-
-                {/* Submit Button */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full px-6 py-3 bg-sky-600 hover:bg-sky-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors"
+              {/* Operation Type */}
+              <div>
+                <label htmlFor="operationType" className="block text-xs uppercase tracking-luxury text-ink-muted mb-2">
+                  {dict.form.operationType}
+                </label>
+                <select
+                  id="operationType"
+                  name="operationType"
+                  value={formData.operationType}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-surface border border-hairline rounded-lg text-ink focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all cursor-pointer"
                 >
-                  {isSubmitting ? 'Enviando...' : dict.form.submit}
-                </button>
-              </form>
-            </div>
+                  <option value="sell">{dict.form.sell}</option>
+                  <option value="rent">{dict.form.rent}</option>
+                </select>
+              </div>
+
+              {/* Description Field */}
+              <div>
+                <label htmlFor="description" className="block text-xs uppercase tracking-luxury text-ink-muted mb-2">
+                  {dict.form.description}
+                </label>
+                <textarea
+                  id="description"
+                  name="description"
+                  value={formData.description}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full px-4 py-3 bg-surface border border-hairline rounded-lg text-ink placeholder-ink-muted focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+                  placeholder={dict.form.description}
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full px-6 py-3 bg-primary hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed text-ink font-semibold rounded-lg transition-colors"
+              >
+                {isSubmitting ? 'Enviando...' : dict.form.submit}
+              </button>
+            </form>
           </div>
         </div>
       </div>
