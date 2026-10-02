@@ -21,7 +21,7 @@ export const dictionary = {
         "Estrategia de posicionamiento y marketing digital de alto impacto",
         "Recomendaciones de reacondicionamiento y puesta en valor",
         "Gestión transparente y acompañamiento en todo el proceso de cierre",
-      ],
+      ] as string[],
       form: {
         name: "Nombre y Apellido",
         phone: "Teléfono / WhatsApp",
@@ -80,7 +80,7 @@ export const dictionary = {
         "High-impact positioning and digital marketing strategy",
         "Property staging and value enhancement recommendations",
         "Transparent management and support throughout the closing process",
-      ],
+      ] as string[],
       form: {
         name: "Full Name",
         phone: "Phone / WhatsApp",
@@ -139,7 +139,7 @@ export const dictionary = {
         "Estratégia de posicionamento e marketing digital de alto impacto",
         "Recomendações de staging e valorização da propriedade",
         "Gestão transparente e suporte em todo o processo de fechamento",
-      ],
+      ] as string[],
       form: {
         name: "Nome Completo",
         phone: "Telefone / WhatsApp",

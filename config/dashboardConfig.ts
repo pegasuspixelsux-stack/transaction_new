@@ -19,6 +19,7 @@ export const dashboardConfig: {
     hoursShort: string;
     phone: string;
     phoneHref: string;
+    email: string;
   };
   footerNav: DashboardLink[];
 } = {
@@ -46,6 +47,7 @@ export const dashboardConfig: {
     hoursShort: "9–19 h",
     phone: "+598 42 77 1234",
     phoneHref: "tel:+59842771234",
+    email: "info@transaction.uy",
   },
   footerNav: [
     { name: "Volver al sitio", href: "/", icon: "ExternalLink" },
