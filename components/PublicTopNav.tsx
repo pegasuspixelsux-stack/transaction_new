@@ -175,7 +175,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         </div>
 
         {/* Main Navigation Row (BELOW the stripe) */}
-        <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/5">
+        <div className="flex items-center justify-between px-6 py-3.5 border-b border-black/10">
           {/* Brand Logo with Icon */}
           <a href={`/${locale}`} className="flex items-center gap-2.5 font-serif tracking-widest text-lg uppercase font-bold text-black hover:opacity-80 transition-opacity">
             <TransactionMark className="size-6" />
