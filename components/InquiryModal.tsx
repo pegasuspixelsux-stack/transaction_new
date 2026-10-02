@@ -90,7 +90,7 @@ export function InquiryModal({
               Consulta recibida
             </h2>
             <p className="text-sm leading-relaxed text-ink-muted">
-              Registramos sus datos. Un asesor de Oceanus se pondrá en contacto
+              Registramos sus datos. Un asesor de Transaction se pondrá en contacto
               por WhatsApp o teléfono a la brevedad.
             </p>
             <button type="button" onClick={close} className={`${buttonClass} self-start`}>
@@ -145,7 +145,7 @@ export function InquiryModal({
                 className={`mt-0.5 size-4 shrink-0 accent-ink ${focusRing}`}
               />
               <span>
-                Autorizo a Oceanus a utilizar mis datos de contacto
+                Autorizo a Transaction a utilizar mis datos de contacto
                 exclusivamente para gestionar esta consulta, de acuerdo con la{" "}
                 <Link href="/privacidad" className="underline underline-offset-2 hover:text-ink">
                   política de privacidad

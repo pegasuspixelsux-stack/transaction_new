@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const property = find((await params).id);
   if (!property) return {};
   return {
-    title: `${property.title} · Oceanus`,
+    title: `${property.title} · Transaction`,
     description: `${propertyTypeLabel(property.type)} en ${property.zone}, Punta del Este.`,
   };
 }

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Trident } from "@/components/Trident";
+import { TransactionMark } from "@/components/TransactionMark";
 
 const SOCIAL: { label: string; path: string }[] = [
   {
@@ -19,7 +19,7 @@ const SOCIAL: { label: string; path: string }[] = [
 const FOOTER_COLUMNS: { heading: string; items: string[] }[] = [
   { heading: "Propiedades", items: ["Casas", "Apartamentos", "Penthouses", "Terrenos"] },
   { heading: "Zonas", items: ["José Ignacio", "Manantiales", "La Barra", "Península", "Mansa"] },
-  { heading: "Oceanus", items: ["Nosotros", "Contacto", "Prensa"] },
+  { heading: "Transaction", items: ["Nosotros", "Contacto", "Prensa"] },
 ];
 
 const LEGAL_LINKS: { label: string; href: string }[] = [
@@ -35,9 +35,9 @@ export function SiteFooter() {
         <div className="flex flex-col gap-12 sm:flex-row sm:justify-between">
           <div className="max-w-xs">
             <div className="flex items-center gap-3">
-              <Trident className="size-8 text-sky-600" />
+              <TransactionMark className="size-8 text-sky-600" />
               <span className="text-xl uppercase tracking-wordmark text-ink">
-                Oceanus
+                Transaction
               </span>
             </div>
             <p className="mt-5 text-sm leading-relaxed text-ink-muted">
@@ -83,7 +83,7 @@ export function SiteFooter() {
         </div>
         <div className="mt-16 flex flex-col gap-2 border-t border-hairline pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-ink-muted">
-            © 2026 Oceanus. Punta del Este, Uruguay. Todos los derechos reservados.
+            © 2026 Transaction. Punta del Este, Uruguay. Todos los derechos reservados.
           </p>
           <ul className="flex flex-wrap items-center gap-x-6">
             {LEGAL_LINKS.map(({ label, href }) => (

@@ -15,7 +15,7 @@ export const dashboardConfig: {
   footerNav: DashboardLink[];
 } = {
   brand: {
-    name: "Oceanus",
+    name: "Transaction",
     subtitle: "Real Estate Portal",
     logoLetter: "O",
   },

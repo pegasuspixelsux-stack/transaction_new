@@ -5,7 +5,7 @@ import { PropertyFilters } from "@/components/PropertyFilters";
 import { SiteFooter } from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Propiedades · Oceanus",
+  title: "Propiedades · Transaction",
   description:
     "Cartera completa de residencias frente al mar en Punta del Este.",
 };

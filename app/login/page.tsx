@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { LoginForm } from "@/components/LoginForm";
-import { Trident } from "@/components/Trident";
+import { TransactionMark } from "@/components/TransactionMark";
 
 export const metadata: Metadata = {
-  title: "Ingreso al panel · Oceanus",
+  title: "Ingreso al panel · Transaction",
   robots: { index: false },
 };
 
@@ -28,7 +28,7 @@ export default function LoginPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         <div className="absolute bottom-16 left-16 z-10 max-w-lg text-white">
           <p className="mb-3 text-xs uppercase tracking-luxury text-white/80">
-            Portafolio Oceanus
+            Portafolio Transaction
           </p>
           <h1 className="font-display text-3xl font-normal leading-snug tracking-tight">
             Residencias frente al mar y oportunidades de inversión, a su medida.
@@ -60,9 +60,9 @@ export default function LoginPage() {
 
         <div className="mx-auto w-full max-w-md py-8">
           <div className="mb-10 text-center">
-            <Trident className="mx-auto size-8 text-sky-600" />
+            <TransactionMark className="mx-auto size-8 text-sky-600" />
             <h2 className="mt-4 text-xl uppercase tracking-wordmark text-ink">
-              Oceanus
+              Transaction
             </h2>
             <p className="mt-2 text-xs uppercase tracking-luxury text-ink-muted">
               Portal de clientes y asesores
@@ -72,7 +72,7 @@ export default function LoginPage() {
         </div>
 
         <p className="text-center text-xs text-ink-muted">
-          © 2026 Oceanus. Todos los derechos reservados.
+          © 2026 Transaction. Todos los derechos reservados.
         </p>
       </div>
     </main>

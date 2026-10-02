@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
-import { Trident } from "@/components/Trident";
+import { TransactionMark } from "@/components/TransactionMark";
 
 const NAV_LINKS: { label: string; href: string }[] = [
   { label: "Inicio", href: "/" },
@@ -19,12 +19,12 @@ export function SiteHeader() {
       <nav className="container-page flex items-center justify-between py-5">
         <Link
           href="/"
-          aria-label="Oceanus — inicio"
+          aria-label="Transaction — inicio"
           className={`flex items-center gap-2.5 ${focusRing}`}
         >
-          <Trident className="size-4 text-sky-600" />
+          <TransactionMark className="size-4 text-sky-600" />
           <span className="text-sm font-light uppercase tracking-wordmark text-ink">
-            Oceanus
+            Transaction
           </span>
         </Link>
 

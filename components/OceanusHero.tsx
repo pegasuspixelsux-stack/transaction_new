@@ -1,5 +1,5 @@
 import { HeroSlideshow } from "@/components/HeroSlideshow";
-import { Trident } from "@/components/Trident";
+import { TransactionMark } from "@/components/TransactionMark";
 import { properties } from "@/lib/properties";
 
 const HERO_PROPERTIES = properties.slice(0, 4);
@@ -25,9 +25,9 @@ export function OceanusHero() {
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0 flex select-none items-center justify-center gap-4 sm:gap-8"
       >
-        <Trident className="size-16 text-white/30 sm:size-24 lg:size-32" />
+        <TransactionMark className="size-16 text-white/30 sm:size-24 lg:size-32" />
         <span className="text-5xl font-normal uppercase tracking-wordmark text-white/30 sm:text-7xl lg:text-8xl">
-          Oceanus
+          Transaction
         </span>
       </div>
     </section>

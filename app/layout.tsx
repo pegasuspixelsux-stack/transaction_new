@@ -15,7 +15,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Oceanus",
+  title: "Transaction",
   description: "Propiedades de autor frente al mar en Punta del Este.",
 };
 
