@@ -34,7 +34,7 @@ export function SiteFooter() {
       <div className="container-page py-16">
         <div className="flex flex-col gap-12 sm:flex-row sm:justify-between">
           <div className="max-w-xs">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               <TransactionMark className="size-8 text-sky-600" />
               <span className="text-xl font-bold uppercase tracking-wordmark text-ink">
                 Transaction
