@@ -83,35 +83,53 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-start gap-6 px-4 py-2 text-white bg-black/20">
-          {/* Map Button */}
-          <button
-            onClick={openMap}
-            aria-label="Ver ubicación"
-            className="text-neutral-300 hover:text-primary transition-colors"
-            title="Ver ubicación"
-          >
-            <MapPin className="w-4 h-4" />
-          </button>
+        <div className="flex items-center justify-between px-4 py-2 text-white bg-black/20">
+          {/* LEFT: Icon Buttons */}
+          <div className="flex items-center gap-6">
+            {/* Map Button */}
+            <button
+              onClick={openMap}
+              aria-label="Ver ubicación"
+              className="text-neutral-300 hover:text-primary transition-colors"
+              title="Ver ubicación"
+            >
+              <MapPin className="w-4 h-4" />
+            </button>
 
-          {/* Clock Button */}
-          <button
-            onClick={scrollToHours}
-            aria-label="Ver horarios"
-            className="text-neutral-300 hover:text-primary transition-colors"
-            title="Ver horarios"
-          >
-            <Clock className="w-4 h-4" />
-          </button>
+            {/* Clock Button */}
+            <button
+              onClick={scrollToHours}
+              aria-label="Ver horarios"
+              className="text-neutral-300 hover:text-primary transition-colors"
+              title="Ver horarios"
+            >
+              <Clock className="w-4 h-4" />
+            </button>
 
-          {/* Phone Button */}
-          <a
-            href="tel:+59899000000"
-            aria-label="Llamar"
-            className="text-neutral-300 hover:text-primary transition-colors"
-          >
-            <Phone className="w-4 h-4" />
-          </a>
+            {/* Phone Button */}
+            <a
+              href={contact.phoneHref}
+              aria-label="Llamar"
+              className="text-neutral-300 hover:text-primary transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+            </a>
+          </div>
+
+          {/* CENTER: Buy, Sell, Rent Links */}
+          <div className="flex items-center gap-4 text-xs uppercase tracking-wider font-medium">
+            <a href={`/${locale}/comprar`} className="text-neutral-300 hover:text-primary transition-colors">
+              Buy
+            </a>
+            <span className="text-neutral-600">/</span>
+            <a href={`/${locale}/vender`} className="text-neutral-300 hover:text-primary transition-colors">
+              Sell
+            </a>
+            <span className="text-neutral-600">/</span>
+            <a href={`/${locale}/alquilar`} className="text-neutral-300 hover:text-primary transition-colors">
+              Rent
+            </a>
+          </div>
         </div>
       </div>
 
