@@ -18,7 +18,7 @@ export function OceanusHero() {
       {/* Vertical dark gradient at top edges */}
       <div
         aria-hidden
-        className="absolute top-0 inset-x-0 h-24 bg-gradient-to-r from-black/40 via-transparent to-black/40 z-10"
+        className="absolute top-0 inset-x-0 h-32 bg-gradient-to-r from-black/60 via-black/20 to-black/60 z-10"
       />
 
       {/* Scrims so the property detail reads over any slide:
