@@ -51,7 +51,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className="flex items-center justify-between px-4 py-2 text-white backdrop-blur-md bg-black/10 border-b border-white/10">
+        <div className="flex items-center justify-between px-4 py-2 text-black backdrop-blur-md bg-black/10 border-b border-white/10">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-2.5">
             <TransactionMark className="size-4" />
@@ -65,7 +65,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               aria-label="Select language"
-              className="bg-transparent text-xs text-neutral-300 outline-none cursor-pointer"
+              className="bg-transparent text-xs text-black/70 outline-none cursor-pointer"
             >
               <option value="es" className="bg-neutral-900">ES</option>
               <option value="en" className="bg-neutral-900">EN</option>
@@ -83,14 +83,14 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-between px-4 py-2 text-white bg-black/10">
+        <div className="flex items-center justify-between px-4 py-2 text-black bg-black/10">
           {/* LEFT: Icon Buttons (Map & Clock only) */}
           <div className="flex items-center gap-6">
             {/* Map Button */}
             <button
               onClick={openMap}
               aria-label="Ver ubicación"
-              className="text-neutral-300 hover:text-primary transition-colors"
+              className="text-black/70 hover:text-primary transition-colors"
               title="Ver ubicación"
             >
               <MapPin className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             <button
               onClick={scrollToHours}
               aria-label="Ver horarios"
-              className="text-neutral-300 hover:text-primary transition-colors"
+              className="text-black/70 hover:text-primary transition-colors"
               title="Ver horarios"
             >
               <Clock className="w-4 h-4" />
@@ -109,15 +109,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-4 text-xs uppercase tracking-wider font-medium">
-            <a href={`/${locale}/comprar`} className="text-neutral-300 hover:text-primary transition-colors">
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
               Buy
             </a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/vender`} className="text-neutral-300 hover:text-primary transition-colors">
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-primary transition-colors">
               Sell
             </a>
-            <span className="text-neutral-600">/</span>
-            <a href={`/${locale}/alquilar`} className="text-neutral-300 hover:text-primary transition-colors">
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-primary transition-colors">
               Rent
             </a>
           </div>
@@ -147,7 +147,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           </a>
 
           {/* CENTER: Main Pages */}
-          <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-neutral-300">
+          <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-black/70">
             <a href={`/${locale}`} className="hover:text-black transition-colors">{dict.inicio}</a>
             <a href={`/${locale}/propiedades`} className="hover:text-black transition-colors">{dict.propiedades}</a>
             <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
@@ -179,7 +179,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         </div>
 
         {/* Secondary Info Bar (Placed BELOW the main nav, matching the same transparent color theme) */}
-        <div className="flex items-center justify-between px-6 py-2 text-xs text-neutral-300">
+        <div className="flex items-center justify-between px-6 py-2 text-xs text-black/70">
           <div className="flex items-center gap-6">
             {/* Address with Map Link */}
             <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
