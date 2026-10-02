@@ -42,7 +42,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/15 border-b border-white/10">
+    <header className="sticky top-0 z-50 backdrop-blur-md bg-black/10 border-b border-white/10">
 
       {/* =========================================================
           1. MOBILE LAYOUT (< md breakpoint: phones only)
