@@ -108,7 +108,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           </div>
 
           {/* CENTER: Buy, Sell, Rent Links */}
-          <div className="flex items-center gap-4 text-xs uppercase tracking-wider font-medium">
+          <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium">
             <a href={`/${locale}/comprar`} className="text-black/70 hover:text-primary transition-colors">
               Comprar
             </a>
