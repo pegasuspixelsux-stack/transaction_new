@@ -141,19 +141,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
         {/* Stripe (Info Bar on TOP) */}
         <div className="flex items-center justify-between px-6 py-2 text-xs text-black/70">
-          <div className="flex items-center gap-6">
-            {/* Address with Map Link */}
-            <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
-              <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>Av. Gorlero, Punta del Este, Maldonado</span>
-            </button>
-
-            {/* Hours with Scroll Link */}
-            <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
-              <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
-              <span>Lun - Sáb: 9:00 - 19:00</span>
-            </button>
-          </div>
+          {/* Address with Map Link */}
+          <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
+            <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
+            <span>Av. Gorlero, Punta del Este, Maldonado</span>
+          </button>
 
           {/* CENTER: Buy/Sell/Rent Links */}
           <div className="flex items-center gap-2 font-medium">
@@ -164,11 +156,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
           </div>
 
-          {/* Phone Number - Right aligned */}
-          <a href={contact.phoneHref} className="flex items-center gap-2 text-black hover:text-primary transition-colors">
-            <Phone className="w-3.5 h-3.5 text-primary" />
-            <span className="font-medium">{contact.phone}</span>
-          </a>
+          {/* Hours - Right aligned */}
+          <button onClick={scrollToHours} className="flex items-center gap-2 hover:text-primary transition-colors">
+            <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
+            <span>Lun - Sáb: 9:00 - 19:00</span>
+          </button>
         </div>
 
         {/* Main Navigation Row (BELOW the stripe) */}
@@ -186,19 +178,26 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
           </nav>
 
-          {/* Language Switcher */}
-          <div className="relative flex items-center gap-1 bg-white/5 border border-white/15 rounded-lg px-2 py-1">
-            <Globe className="w-3.5 h-3.5 text-neutral-400" />
-            <select
-              value={locale}
-              onChange={(e) => handleLanguageChange(e.target.value)}
-              aria-label="Select language"
-              className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
-            >
-              <option value="es" className="bg-neutral-900 text-black">ES</option>
-              <option value="en" className="bg-neutral-900 text-black">EN</option>
-              <option value="pt" className="bg-neutral-900 text-black">PT</option>
-            </select>
+          {/* Language Switcher & Phone */}
+          <div className="flex items-center gap-4">
+            <div className="relative flex items-center gap-1 bg-white/5 border border-white/15 rounded-lg px-2 py-1">
+              <Globe className="w-3.5 h-3.5 text-neutral-400" />
+              <select
+                value={locale}
+                onChange={(e) => handleLanguageChange(e.target.value)}
+                aria-label="Select language"
+                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
+              >
+                <option value="es" className="bg-neutral-900 text-black">ES</option>
+                <option value="en" className="bg-neutral-900 text-black">EN</option>
+                <option value="pt" className="bg-neutral-900 text-black">PT</option>
+              </select>
+            </div>
+
+            <a href={contact.phoneHref} className="flex items-center gap-2 text-black hover:text-primary transition-colors text-xs font-medium">
+              <Phone className="w-3.5 h-3.5 text-primary" />
+              <span>{contact.phone}</span>
+            </a>
           </div>
         </div>
 
