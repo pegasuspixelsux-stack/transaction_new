@@ -85,7 +85,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         {/* ICON STRIPE: Transparent, no boxes */}
         <div className="flex items-center justify-between px-4 py-2 text-black bg-black/10">
           {/* LEFT: Icon Buttons (Map & Clock only) */}
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-3">
             {/* Map Button */}
             <button
               onClick={openMap}
