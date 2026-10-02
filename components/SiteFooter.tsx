@@ -36,7 +36,7 @@ export function SiteFooter() {
           <div className="max-w-xs">
             <div className="flex items-center gap-3">
               <TransactionMark className="size-8 text-sky-600" />
-              <span className="text-xl uppercase tracking-wordmark text-ink">
+              <span className="text-xl font-bold uppercase tracking-widest text-ink">
                 Transaction
               </span>
             </div>

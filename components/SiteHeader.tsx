@@ -47,7 +47,7 @@ export function SiteHeader() {
           className={`flex items-center gap-2.5 ${focusRing}`}
         >
           <TransactionMark className="size-4 text-sky-600" />
-          <span className="text-sm font-light uppercase tracking-wordmark text-ink">
+          <span className="text-sm font-bold uppercase tracking-widest text-ink">
             Transaction
           </span>
         </Link>
