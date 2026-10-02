@@ -70,16 +70,20 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
   return (
     <section className="scroll-mt-24 border-t border-hairline bg-surface-raised">
       <div className="container-page py-24 sm:py-32">
-        <p className="text-xs uppercase tracking-luxury text-ink-muted">Vender o Alquilar</p>
-        <h2 className="mt-3 font-display text-3xl font-normal tracking-tight sm:text-4xl">
-          {dict.title}
-        </h2>
-        <p className="mt-4 max-w-md text-base leading-relaxed text-ink-muted">
-          {dict.subtitle}
-        </p>
-        <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* LEFT COLUMN: Text & Key Points */}
           <div className="space-y-8">
+            {/* Eyebrow, Heading, Subtitle */}
+            <div>
+              <p className="text-xs uppercase tracking-luxury text-ink-muted">Vender o Alquilar</p>
+              <h2 className="mt-3 font-display text-3xl font-normal tracking-tight sm:text-4xl">
+                {dict.title}
+              </h2>
+              <p className="mt-4 text-base leading-relaxed text-ink-muted">
+                {dict.subtitle}
+              </p>
+            </div>
+
             {/* Key Points */}
             <div className="space-y-4">
               {dict.points.map((point, index) => (
@@ -94,7 +98,7 @@ export function PropertyAdvisorySection({ locale, dict }: PropertyAdvisorySectio
           </div>
 
           {/* RIGHT COLUMN: Contact Form */}
-          <div>
+          <div className="h-full">
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
