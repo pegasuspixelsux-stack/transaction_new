@@ -47,24 +47,39 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           Icon stripe below (transparent, no boxes)
           ========================================================= */}
       <div className="flex md:hidden flex-col">
-        {/* TOP ROW: Logo/Title left, Burger menu right */}
+        {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
         <div className="flex items-center justify-between px-4 py-3 text-white">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-2">
             <span className="font-serif tracking-widest text-sm uppercase">Transaction</span>
           </a>
 
-          {/* RIGHT: Burger Menu */}
-          <button
-            aria-label="Abrir menú"
-            className="p-1.5 text-white hover:text-primary transition-colors"
-          >
-            <Menu className="w-6 h-6" />
-          </button>
+          {/* RIGHT: Language selector and Burger Menu */}
+          <div className="flex items-center gap-2">
+            {/* Language Selector */}
+            <select
+              value={locale}
+              onChange={(e) => handleLanguageChange(e.target.value)}
+              aria-label="Select language"
+              className="bg-transparent text-xs text-neutral-300 outline-none cursor-pointer"
+            >
+              <option value="es" className="bg-neutral-900">ES</option>
+              <option value="en" className="bg-neutral-900">EN</option>
+              <option value="pt" className="bg-neutral-900">PT</option>
+            </select>
+
+            {/* Burger Menu */}
+            <button
+              aria-label="Abrir menú"
+              className="p-1.5 text-white hover:text-primary transition-colors"
+            >
+              <Menu className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className="flex items-center justify-between px-4 py-2 text-white">
+        <div className="flex items-center justify-start gap-6 px-4 py-2 text-white">
           {/* Map Button */}
           <button
             onClick={openMap}
@@ -93,18 +108,6 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           >
             <Phone className="w-4 h-4" />
           </a>
-
-          {/* Language Selector */}
-          <select
-            value={locale}
-            onChange={(e) => handleLanguageChange(e.target.value)}
-            aria-label="Select language"
-            className="bg-transparent text-xs text-neutral-300 outline-none cursor-pointer"
-          >
-            <option value="es" className="bg-neutral-900">ES</option>
-            <option value="en" className="bg-neutral-900">EN</option>
-            <option value="pt" className="bg-neutral-900">PT</option>
-          </select>
         </div>
       </div>
 
