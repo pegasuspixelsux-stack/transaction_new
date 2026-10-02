@@ -147,21 +147,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             Transaction
           </a>
 
-          {/* CENTER: Main Pages + Separator + Buy/Sell/Rent */}
+          {/* CENTER: Main Pages */}
           <nav className="flex items-center gap-8 text-xs uppercase tracking-wider text-black/70">
             <a href={`/${locale}`} className="hover:text-black transition-colors">{dict.inicio}</a>
             <a href={`/${locale}/propiedades`} className="hover:text-black transition-colors">{dict.propiedades}</a>
             <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
-
-            {/* Separator */}
-            <span className="text-black/40">|</span>
-
-            {/* Buy/Sell/Rent Links */}
-            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
-            <span className="text-black/40">/</span>
-            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
-            <span className="text-black/40">/</span>
-            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
           </nav>
 
           {/* Actions: Language Switcher & Dashboard Link */}
@@ -203,6 +193,15 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               <Clock className="w-3.5 h-3.5 text-primary shrink-0" />
               <span>Lun - Sáb: 9:00 - 19:00</span>
             </button>
+          </div>
+
+          {/* CENTER: Buy/Sell/Rent Links */}
+          <div className="flex items-center gap-2 font-medium">
+            <a href={`/${locale}/comprar`} className="text-black/70 hover:text-black transition-colors">Comprar</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/vender`} className="text-black/70 hover:text-black transition-colors">Vender</a>
+            <span className="text-black/40">/</span>
+            <a href={`/${locale}/alquilar`} className="text-black/70 hover:text-black transition-colors">Alquilar</a>
           </div>
 
           {/* Phone Number - Right aligned */}
