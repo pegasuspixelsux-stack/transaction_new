@@ -162,7 +162,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
       <div className="hidden md:flex flex-col">
 
         {/* Stripe (Info Bar on TOP) */}
-        <div className={`flex items-center justify-between px-6 py-2 text-xs border-b border-black/10 transition-colors ${isScrolled ? 'text-white' : 'text-black/70'}`}>
+        <div className={`flex items-center justify-between px-6 py-2 text-xs border-b border-black transition-colors ${isScrolled ? 'text-white' : 'text-black/70'}`}>
           {/* Address with Map Link */}
           <button onClick={openMap} className="flex items-center gap-2 hover:text-primary transition-colors text-left">
             <MapPin className="w-3.5 h-3.5 text-primary shrink-0" />
