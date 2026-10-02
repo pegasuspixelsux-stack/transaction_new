@@ -1,8 +1,8 @@
+import { ContactForm } from "@/components/ContactForm";
+
 const focusRing =
   "focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-2 focus-visible:outline-ink";
 
-const fieldClass =
-  "border border-hairline bg-surface px-4 py-3 text-sm text-ink transition-colors placeholder:text-ink-muted focus-visible:outline focus-visible:outline-1 focus-visible:outline-offset-0 focus-visible:outline-ink";
 
 export function Contact() {
   return (
@@ -42,26 +42,7 @@ export function Contact() {
           </div>
 
           {/* Right — enquiry form */}
-          <form className="flex flex-col gap-5">
-            <label className="flex flex-col gap-2">
-              <span className="text-xs uppercase tracking-luxury text-ink-muted">Nombre</span>
-              <input type="text" name="nombre" autoComplete="name" className={fieldClass} />
-            </label>
-            <label className="flex flex-col gap-2">
-              <span className="text-xs uppercase tracking-luxury text-ink-muted">Email</span>
-              <input type="email" name="email" autoComplete="email" className={fieldClass} />
-            </label>
-            <label className="flex flex-col gap-2">
-              <span className="text-xs uppercase tracking-luxury text-ink-muted">Mensaje</span>
-              <textarea name="mensaje" rows={4} className={`${fieldClass} resize-none`} />
-            </label>
-            <button
-              type="submit"
-              className={`mt-2 inline-flex min-h-11 items-center justify-center border border-ink/30 px-8 text-xs uppercase tracking-luxury transition-colors hover:bg-ink hover:text-surface ${focusRing}`}
-            >
-              Enviar consulta
-            </button>
-          </form>
+          <ContactForm />
         </div>
       </div>
     </section>
