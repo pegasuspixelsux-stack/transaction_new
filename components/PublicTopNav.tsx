@@ -77,7 +77,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-3 whitespace-nowrap transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
             <TransactionMark className={`size-9 shrink-0 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`} />
-            <span className="font-serif tracking-widest text-xl uppercase font-bold">Transaction</span>
+            <span className="font-serif tracking-[0.15em] text-xl uppercase font-bold">Transaction</span>
           </a>
 
           {/* RIGHT: Language selector and Burger Menu */}
@@ -188,7 +188,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         {/* Main Navigation Row (BELOW the stripe) */}
         <div className="flex items-center justify-between px-4 py-2 border-b border-white/20">
           {/* Brand Logo with Icon */}
-          <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2 whitespace-nowrap font-serif tracking-wide text-sm uppercase font-bold hover:opacity-80 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
+          <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2 whitespace-nowrap font-serif tracking-[0.1em] text-sm uppercase font-bold hover:opacity-80 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
             <TransactionMark className={`size-6 shrink-0 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`} />
             Transaction
           </a>
