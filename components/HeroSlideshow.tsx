@@ -36,7 +36,8 @@ export function HeroSlideshow({ properties }: { properties: Property[] }) {
         loading="eager"
         fetchPriority="high"
         sizes="100vw"
-        className="object-cover motion-safe:animate-[heroSlide_1400ms_ease-out]"
+        className="object-cover motion-safe:animate-[heroSlide_1400ms_ease-out] absolute inset-0"
+        style={{ width: '100%', height: '100%' }}
       />
 
       <div className="container-page relative z-10 mt-auto flex flex-col items-start gap-2.5 pb-20 text-white [text-shadow:0_1px_18px_rgba(0,0,0,0.45)] sm:pb-28">
