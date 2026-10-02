@@ -186,28 +186,19 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
             <a href={`/${locale}/#contacto`} className="hover:text-black transition-colors">{dict.contacto}</a>
           </nav>
 
-          {/* Actions: Language Switcher & Dashboard Link */}
-          <div className="flex items-center gap-4">
-            <div className="relative flex items-center gap-1 bg-white/5 border border-white/15 rounded-lg px-2 py-1">
-              <Globe className="w-3.5 h-3.5 text-neutral-400" />
-              <select
-                value={locale}
-                onChange={(e) => handleLanguageChange(e.target.value)}
-                aria-label="Select language"
-                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
-              >
-                <option value="es" className="bg-neutral-900 text-black">ES</option>
-                <option value="en" className="bg-neutral-900 text-black">EN</option>
-                <option value="pt" className="bg-neutral-900 text-black">PT</option>
-              </select>
-            </div>
-
-            <a
-              href="/dashboard"
-              className="px-3.5 py-1.5 rounded-lg bg-primary text-black text-xs font-semibold tracking-wider uppercase hover:opacity-90 transition-opacity shadow-sm shadow-primary/20"
+          {/* Language Switcher */}
+          <div className="relative flex items-center gap-1 bg-white/5 border border-white/15 rounded-lg px-2 py-1">
+            <Globe className="w-3.5 h-3.5 text-neutral-400" />
+            <select
+              value={locale}
+              onChange={(e) => handleLanguageChange(e.target.value)}
+              aria-label="Select language"
+              className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
             >
-              {dict.panel}
-            </a>
+              <option value="es" className="bg-neutral-900 text-black">ES</option>
+              <option value="en" className="bg-neutral-900 text-black">EN</option>
+              <option value="pt" className="bg-neutral-900 text-black">PT</option>
+            </select>
           </div>
         </div>
 
