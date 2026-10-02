@@ -3,6 +3,7 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { Locale } from '@/lib/translations';
 import { dashboardConfig } from '@/config/dashboardConfig';
+import { TransactionMark } from '@/components/TransactionMark';
 import { MapPin, Clock, Phone, Globe, Menu } from 'lucide-react';
 
 interface PublicTopNavProps {
@@ -52,7 +53,8 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
         <div className="flex items-center justify-between px-4 py-3 text-white">
           {/* LEFT: Brand Logo & Title */}
-          <a href={`/${locale}`} className="flex items-center gap-2">
+          <a href={`/${locale}`} className="flex items-center gap-2.5">
+            <TransactionMark className="size-4" />
             <span className="font-serif tracking-widest text-sm uppercase">Transaction</span>
           </a>
 
