@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronRight, Phone } from 'lucide-react';
 import { type Locale } from '@/lib/translations';
 import { dashboardConfig } from '@/config/dashboardConfig';
@@ -41,6 +41,14 @@ interface ContactAndListingTabsProps {
 
 export function ContactAndListingTabs({ locale, dict }: ContactAndListingTabsProps) {
   const [activeTab, setActiveTab] = useState<'contact' | 'listing'>('contact');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const tab = params.get('tab');
+    if (tab === 'listing') {
+      setActiveTab('listing');
+    }
+  }, []);
   const [contactForm, setContactForm] = useState({
     name: '',
     email: '',
@@ -125,7 +133,7 @@ export function ContactAndListingTabs({ locale, dict }: ContactAndListingTabsPro
   };
 
   return (
-    <section className="scroll-mt-24 border-t border-hairline bg-surface-raised">
+    <section id="contacto" className="scroll-mt-24 border-t border-hairline bg-surface-raised">
       <div className="container-page py-24 sm:py-32">
         {/* Section Header */}
         <div className="mb-12">

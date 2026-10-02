@@ -124,7 +124,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
               {stripe.buy}
             </a>
             <span className="text-black/40">/</span>
-            <a href={`/${locale}/vender`} className="text-black/70 hover:text-primary transition-colors">
+            <a href={`/?tab=listing#contacto`} className="text-black/70 hover:text-primary transition-colors">
               {stripe.sell}
             </a>
             <span className="text-black/40">/</span>
