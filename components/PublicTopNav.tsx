@@ -64,7 +64,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
   };
 
   return (
-    <header className={`sticky top-0 z-50 transition-colors ${isScrolled ? 'backdrop-blur-md bg-black/20 border-b border-white/10' : 'bg-transparent border-b border-transparent'}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-colors ${isScrolled ? 'backdrop-blur-md bg-black/20 border-b border-white/10' : 'bg-transparent border-b border-transparent'}`}>
 
       {/* =========================================================
           1. MOBILE LAYOUT (< md breakpoint: phones only)
