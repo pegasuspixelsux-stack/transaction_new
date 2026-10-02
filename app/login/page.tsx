@@ -61,7 +61,7 @@ export default function LoginPage() {
         <div className="mx-auto w-full max-w-md py-8">
           <div className="mb-10 text-center">
             <TransactionMark className="mx-auto size-8 text-sky-600" />
-            <h2 className="mt-4 text-xl font-bold uppercase tracking-widest text-ink">
+            <h2 className="mt-4 text-xl font-light uppercase tracking-wordmark text-ink">
               Transaction
             </h2>
             <p className="mt-2 text-xs uppercase tracking-luxury text-ink-muted">
