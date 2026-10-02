@@ -73,7 +73,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className={`flex items-center justify-between px-4 py-4 transition-colors ${isScrolled ? 'bg-white text-black border-b border-black/10' : 'bg-transparent text-white border-b border-white/50'}`}>
+        <div className={`flex items-center justify-between px-4 py-4 transition-colors backdrop-blur-md ${isScrolled ? 'bg-white/95 text-black border-b border-black/10' : 'bg-white/10 text-white border-b border-white/50'}`}>
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className={`flex flex-shrink-0 items-center gap-2.5 whitespace-nowrap transition-colors ${isScrolled ? 'text-black' : 'text-white'}`}>
             <TransactionMark className={`size-8 shrink-0 transition-colors ${isScrolled ? 'text-black' : 'text-white'}`} />
@@ -105,7 +105,7 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
         </div>
 
         {/* ICON STRIPE: Transparent, no boxes */}
-        <div className={`flex items-center justify-between px-4 py-4 transition-colors ${isScrolled ? 'bg-white text-black border-b border-black/10' : 'bg-transparent text-white border-b border-white/50'}`}>
+        <div className={`flex items-center justify-between px-4 py-4 transition-colors backdrop-blur-md ${isScrolled ? 'bg-white/95 text-black border-b border-black/10' : 'bg-white/10 text-white border-b border-white/50'}`}>
           {/* LEFT: Map Icon */}
           <button
             onClick={openMap}
