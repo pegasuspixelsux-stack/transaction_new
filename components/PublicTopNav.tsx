@@ -106,28 +106,15 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
 
         {/* ICON STRIPE: Transparent, no boxes */}
         <div className={`flex items-center justify-between px-4 py-2 bg-black/5 transition-colors ${isScrolled ? 'text-white' : 'text-black'}`}>
-          {/* LEFT: Icon Buttons (Map & Clock only) */}
-          <div className="flex items-center gap-3">
-            {/* Map Button */}
-            <button
-              onClick={openMap}
-              aria-label="Ver ubicación"
-              className="text-black/70 hover:text-primary transition-colors"
-              title="Ver ubicación"
-            >
-              <MapPin className="w-4 h-4" />
-            </button>
-
-            {/* Clock Button */}
-            <button
-              onClick={scrollToHours}
-              aria-label="Ver horarios"
-              className="text-black/70 hover:text-primary transition-colors"
-              title="Ver horarios"
-            >
-              <Clock className="w-4 h-4" />
-            </button>
-          </div>
+          {/* LEFT: Map Icon */}
+          <button
+            onClick={openMap}
+            aria-label="Ver ubicación"
+            className="text-black/70 hover:text-primary transition-colors"
+            title="Ver ubicación"
+          >
+            <MapPin className="w-4 h-4" />
+          </button>
 
           {/* CENTER: Buy, Sell, Rent Links */}
           <div className="flex items-center gap-2 text-xs uppercase tracking-wider font-medium">
@@ -144,13 +131,14 @@ export default function PublicTopNav({ locale, dict, stripe }: PublicTopNavProps
             </a>
           </div>
 
-          {/* RIGHT: Hours */}
+          {/* RIGHT: Clock Icon */}
           <button
             onClick={scrollToHours}
-            className="flex items-center gap-1.5 text-black hover:text-primary transition-colors text-xs font-medium"
+            aria-label="Ver horarios"
+            className="text-black/70 hover:text-primary transition-colors"
             title="Ver horarios"
           >
-            <span>{stripe.hours}</span>
+            <Clock className="w-4 h-4" />
           </button>
         </div>
       </div>
