@@ -23,9 +23,13 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
   const { contact } = dashboardConfig;
 
   const handleLanguageChange = (newLocale: string) => {
-    const segments = pathname.split('/');
-    segments[1] = newLocale;
-    router.push(segments.join('/'));
+    const segments = pathname.split('/').filter(Boolean);
+    if (['es', 'en', 'pt'].includes(segments[0])) {
+      segments[0] = newLocale;
+    } else {
+      segments.unshift(newLocale);
+    }
+    router.push(`/${segments.join('/')}`);
   };
 
   const scrollToHours = (e: React.MouseEvent) => {
@@ -65,11 +69,11 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
               value={locale}
               onChange={(e) => handleLanguageChange(e.target.value)}
               aria-label="Select language"
-              className="bg-transparent text-xs text-black/70 outline-none cursor-pointer"
+              className="bg-white/10 text-xs text-black outline-none cursor-pointer px-2 py-1 rounded border border-white/20 hover:bg-white/15 transition-colors"
             >
-              <option value="es" className="bg-neutral-900">ES</option>
-              <option value="en" className="bg-neutral-900">EN</option>
-              <option value="pt" className="bg-neutral-900">PT</option>
+              <option value="es" className="bg-neutral-950 text-white">ES</option>
+              <option value="en" className="bg-neutral-950 text-white">EN</option>
+              <option value="pt" className="bg-neutral-950 text-white">PT</option>
             </select>
 
             {/* Burger Menu */}
@@ -180,17 +184,17 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
           {/* Language Switcher & Phone */}
           <div className="flex items-center gap-4">
-            <div className="relative flex items-center gap-1 bg-white/5 border border-white/15 rounded-lg px-2 py-1">
-              <Globe className="w-3.5 h-3.5 text-neutral-400" />
+            <div className="relative flex items-center gap-1 bg-white/10 border border-white/20 rounded-lg px-2.5 py-1.5 hover:bg-white/15 transition-colors">
+              <Globe className="w-3.5 h-3.5 text-primary shrink-0" />
               <select
                 value={locale}
                 onChange={(e) => handleLanguageChange(e.target.value)}
                 aria-label="Select language"
-                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer"
+                className="bg-transparent text-xs text-black uppercase tracking-wider outline-none cursor-pointer appearance-none pr-1"
               >
-                <option value="es" className="bg-neutral-900 text-black">ES</option>
-                <option value="en" className="bg-neutral-900 text-black">EN</option>
-                <option value="pt" className="bg-neutral-900 text-black">PT</option>
+                <option value="es" className="bg-neutral-950 text-white py-1">ES</option>
+                <option value="en" className="bg-neutral-950 text-white py-1">EN</option>
+                <option value="pt" className="bg-neutral-950 text-white py-1">PT</option>
               </select>
             </div>
 
