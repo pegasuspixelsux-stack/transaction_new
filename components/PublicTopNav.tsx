@@ -2,7 +2,7 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 import { Locale } from '@/lib/translations';
-import { MapPin, Clock, Phone, Globe } from 'lucide-react';
+import { MapPin, Clock, Phone, Globe, Menu } from 'lucide-react';
 
 interface PublicTopNavProps {
   locale: Locale;
@@ -43,52 +43,69 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
 
       {/* =========================================================
           1. MOBILE LAYOUT (< md breakpoint: phones only)
-          Simple icons left, Comprar/Vender/Alquilar center, Phone right
+          Logo/Title left, Burger menu right
+          Icon stripe below (transparent, no boxes)
           ========================================================= */}
-      <div className="flex md:hidden items-center justify-between px-3 py-2.5 text-white">
+      <div className="flex md:hidden flex-col">
+        {/* TOP ROW: Logo/Title left, Burger menu right */}
+        <div className="flex items-center justify-between px-4 py-3 text-white">
+          {/* LEFT: Brand Logo & Title */}
+          <a href={`/${locale}`} className="flex items-center gap-2">
+            <span className="font-serif tracking-widest text-sm uppercase">Transaction</span>
+          </a>
 
-        {/* LEFT: Map Pointer & Clock Icons */}
-        <div className="flex items-center gap-2">
+          {/* RIGHT: Burger Menu */}
+          <button
+            aria-label="Abrir menú"
+            className="p-1.5 text-white hover:text-primary transition-colors"
+          >
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
+
+        {/* ICON STRIPE: Transparent, no boxes */}
+        <div className="flex items-center justify-between px-4 py-2 text-white">
+          {/* Map Button */}
           <button
             onClick={openMap}
             aria-label="Ver ubicación"
-            className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-primary hover:bg-white/10 transition-colors"
+            className="text-neutral-300 hover:text-primary transition-colors"
+            title="Ver ubicación"
           >
             <MapPin className="w-4 h-4" />
           </button>
 
+          {/* Clock Button */}
           <button
             onClick={scrollToHours}
             aria-label="Ver horarios"
-            className="p-1.5 rounded-lg bg-white/5 border border-white/10 text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="text-neutral-300 hover:text-primary transition-colors"
+            title="Ver horarios"
           >
             <Clock className="w-4 h-4" />
           </button>
+
+          {/* Phone Button */}
+          <a
+            href="tel:+59899000000"
+            aria-label="Llamar"
+            className="text-neutral-300 hover:text-primary transition-colors"
+          >
+            <Phone className="w-4 h-4" />
+          </a>
+
+          {/* Language Selector */}
+          <select
+            value={locale}
+            onChange={(e) => handleLanguageChange(e.target.value)}
+            aria-label="Select language"
+            className="bg-transparent text-xs text-neutral-300 outline-none cursor-pointer"
+          >
+            <option value="es" className="bg-neutral-900">ES</option>
+            <option value="en" className="bg-neutral-900">EN</option>
+            <option value="pt" className="bg-neutral-900">PT</option>
+          </select>
         </div>
-
-        {/* CENTER: Comprar / Vender / Alquilar */}
-        <nav className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-wider">
-          <a href={`/${locale}/comprar`} className="text-neutral-200 hover:text-primary transition-colors">
-            Comprar
-          </a>
-          <span className="text-neutral-600">/</span>
-          <a href={`/${locale}/vender`} className="text-neutral-200 hover:text-primary transition-colors">
-            Vender
-          </a>
-          <span className="text-neutral-600">/</span>
-          <a href={`/${locale}/alquilar`} className="text-neutral-200 hover:text-primary transition-colors">
-            Alquilar
-          </a>
-        </nav>
-
-        {/* RIGHT: Direct Phone Link */}
-        <a
-          href="tel:+59899000000"
-          aria-label="Llamar"
-          className="p-1.5 rounded-lg bg-primary/20 border border-primary/40 text-primary hover:bg-primary/30 transition-colors"
-        >
-          <Phone className="w-4 h-4" />
-        </a>
       </div>
 
       {/* =========================================================
