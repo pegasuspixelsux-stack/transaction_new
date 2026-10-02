@@ -51,7 +51,7 @@ export default function PublicTopNav({ locale, dict }: PublicTopNavProps) {
           ========================================================= */}
       <div className="flex md:hidden flex-col">
         {/* TOP ROW: Logo/Title left, Language selector and Burger menu right */}
-        <div className="flex items-center justify-between px-4 py-3 text-white backdrop-blur-md bg-black/10 border-b border-white/10">
+        <div className="flex items-center justify-between px-4 py-2 text-white backdrop-blur-md bg-black/10 border-b border-white/10">
           {/* LEFT: Brand Logo & Title */}
           <a href={`/${locale}`} className="flex items-center gap-2.5">
             <TransactionMark className="size-4" />
