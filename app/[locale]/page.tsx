@@ -6,10 +6,9 @@ import { FeaturedProperties } from "@/components/FeaturedProperties";
 import { Zones } from "@/components/Zones";
 import { BrandStatement } from "@/components/BrandStatement";
 import { Team } from "@/components/Team";
-import { Contact } from "@/components/Contact";
+import { ContactAndListingTabs } from "@/components/ContactAndListingTabs";
 import { SiteFooter } from "@/components/SiteFooter";
 import { AGenteConcierge } from "@/components/AGenteConcierge";
-import { PropertyAdvisorySection } from "@/components/PropertyAdvisorySection";
 
 type Params = Promise<{ locale: string }>;
 
@@ -26,6 +25,8 @@ export default async function HomePage({ params }: { params: Params }) {
   const locale = (await params).locale as Locale;
   if (!(locale in dictionary)) notFound();
 
+  const t = dictionary[locale];
+
   return (
     <>
       <OceanusHero />
@@ -33,8 +34,7 @@ export default async function HomePage({ params }: { params: Params }) {
       <FeaturedProperties />
       <Zones />
       <Team />
-      <PropertyAdvisorySection locale={locale} dict={dictionary[locale].advisory} />
-      <Contact />
+      <ContactAndListingTabs locale={locale} dict={t} />
       <SiteFooter />
       <AGenteConcierge />
     </>

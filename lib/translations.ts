@@ -40,6 +40,19 @@ export const dictionary = {
       sell: "Vender",
       rent: "Alquilar",
     },
+    tabs: {
+      title: "Contacto y Asesoramiento",
+      generalContact: "Contacto General",
+      publishProperty: "Publica tu Propiedad",
+    },
+    contactForm: {
+      name: "Nombre y Apellido",
+      email: "Correo Electrónico",
+      phone: "Teléfono",
+      message: "Mensaje",
+      submit: "Enviar Consulta",
+      sending: "Enviando...",
+    },
   },
   en: {
     nav: {
@@ -82,6 +95,19 @@ export const dictionary = {
       sell: "Sell",
       rent: "Rent",
     },
+    tabs: {
+      title: "Contact & Advisory",
+      generalContact: "General Contact",
+      publishProperty: "Publish Your Property",
+    },
+    contactForm: {
+      name: "Full Name",
+      email: "Email Address",
+      phone: "Phone",
+      message: "Message",
+      submit: "Send Inquiry",
+      sending: "Sending...",
+    },
   },
   pt: {
     nav: {
@@ -123,6 +149,19 @@ export const dictionary = {
       buy: "Comprar",
       sell: "Vender",
       rent: "Alugar",
+    },
+    tabs: {
+      title: "Contato e Assessoria",
+      generalContact: "Contato Geral",
+      publishProperty: "Publique sua Propriedade",
+    },
+    contactForm: {
+      name: "Nome Completo",
+      email: "Endereço de Email",
+      phone: "Telefone",
+      message: "Mensagem",
+      submit: "Enviar Consulta",
+      sending: "Enviando...",
     },
   },
 } as const;
